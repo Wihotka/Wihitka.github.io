@@ -1,0 +1,140 @@
+.footer {
+    padding-top: 46px;
+    padding-bottom: 38px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.footer-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+    flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    justify-content: center;
+        -webkit-transition: -webkit-transform 100ms ease-in-out;
+    transition: -webkit-transform 100ms ease-in-out;
+        -o-transition: transform 100ms ease-in-out;
+    transition: transform 100ms ease-in-out;
+    transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+}
+
+.footer-logo:focus {
+    outline: 2px solid #ffffff;
+}
+
+.footer-logo:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    outline: none;
+}
+
+.footer-logo:active {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 0.5;
+    outline: none;
+}
+
+.footer-logo img[alt="Blanchard"] {
+    margin-bottom: 7px;
+}
+
+.footer-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+    align-items: center;
+}
+
+.footer-link {
+    display: inline-block;
+    width: 45.4px;
+    height: 45.4px;
+    margin-right: 19px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45.4px;
+        -webkit-transition: -webkit-transform 100ms ease-in-out;
+    transition: -webkit-transform 100ms ease-in-out;
+        -o-transition: transform 100ms ease-in-out;
+    transition: transform 100ms ease-in-out;
+    transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+}
+
+.footer-link:focus {
+    outline: 2px solid #ffffff;
+}
+
+.footer-link:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    outline: none;
+}
+
+.footer-link:active {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 0.5;
+    outline: none;
+}
+
+.footer-link-one {
+    background-image: url(../images/11-footer/vk.svg);
+}
+
+.footer-link-two {
+    background-image: url(../images/11-footer/instagram.svg);
+}
+
+.footer-link-three {
+    margin-right: 0;
+    background-image: url(../images/11-footer/fb.svg);
+}
+
+@media (max-width: 700px) {
+    .footer {
+        padding-top: 8px;
+        padding-bottom: 7px;
+    }   
+
+    .footer-logo {
+        width: 96.8px;
+        height: auto;
+    }
+
+    .footer-logo img[alt="Blanchard"] {
+        margin-bottom: -4px;
+    }
+
+    .footer-link {
+        width: 25px;
+        height: 25px;
+        margin-right: 13px;
+        background-size: 25px;
+    }
+
+    .footer-link-three {
+        margin-right: 0;
+    }
+}
