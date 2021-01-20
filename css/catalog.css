@@ -42,7 +42,7 @@
     transition: border-width 100ms ease-in-out, filter 100ms ease-in-out, -webkit-filter 100ms ease-in-out;
 }
 
-.catalog-flags-button:not(.mobile):hover .catalog-flag-image {
+.catalog-flags-button:hover .catalog-flag-image {
     border: 2px solid #cacaca;
         -webkit-filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
     filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
@@ -207,7 +207,7 @@
     outline: 2px solid #9d5cd0;
 }
 
-.catalog-second-button:not(.mobile):hover {
+.catalog-second-button:hover {
     color: #9d5cd0;
     outline: none;
 }
@@ -222,17 +222,17 @@
     border: 2px solid #9d5cd0;
 }
 
-.catalog-second-button:not(.mobile):hover + svg {
+.catalog-second-button:hover + svg {
     border: 2px solid #9d5cd0;
     background-color: #9d5cd0;
 }
 
-.catalog-second-button:not(.mobile):hover + svg path {
+.catalog-second-button:hover + svg path {
     fill: #9d5cd0;
     stroke: #9d5cd0;
 }
 
-.catalog-second-button:not(.mobile):hover + svg path[d="M33.3333 23.3333L25 31.6667L16.6667 23.3333"] {
+.catalog-second-button:hover + svg path[d="M33.3333 23.3333L25 31.6667L16.6667 23.3333"] {
     stroke: #ffffff;
 }
 
@@ -251,6 +251,7 @@
 }
 
 .catalog-second-button:active + svg path[d="M33.3333 23.3333L25 31.6667L16.6667 23.3333"] {
+    display: none;
     stroke: #7943a4;
 }
 
@@ -268,11 +269,11 @@
     stroke: #000000;
 }
 
-.ui-state-active .catalog-second-button:not(.mobile):hover + svg path[d="M33.3333 23.3333L25 31.6667L16.6667 23.3333"] {
+.ui-state-active .catalog-second-button:hover + svg path[d="M33.3333 23.3333L25 31.6667L16.6667 23.3333"] {
     stroke: #9d5cd0;
 }
 
-.ui-state-active .catalog-second-button:not(.mobile):hover + svg path[d="M16.6667 27.3333L25 19L33.3333 27.3333"] {
+.ui-state-active .catalog-second-button:hover + svg path[d="M16.6667 27.3333L25 19L33.3333 27.3333"] {
     display: block;
     stroke: #ffffff;
 }
@@ -293,6 +294,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 10;
 }
 
 .ui-state-active {
@@ -333,7 +335,7 @@
     outline: 2px solid #9d5cd0;
 }
 
-.catalog-second-list-tab:not(.mobile):hover {
+.catalog-second-list-tab:hover {
     border-bottom: 1px solid #9d5cd0;
     color: #9d5cd0;
     outline: none;

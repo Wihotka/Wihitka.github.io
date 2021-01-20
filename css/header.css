@@ -38,21 +38,21 @@
     outline: 2px solid #7943A4;
 }
 
-.header-burger:not(.mobile):hover {
+.header-burger:hover {
     outline: none;
 }
 
-.header-burger:not(.mobile):hover rect,
+.header-burger:hover rect,
 .burger-is-active + .header-burger rect {
     fill: #c283f3;
 }
 
-.header-burger:not(.mobile):hover rect:nth-child(2),
+.header-burger:hover rect:nth-child(2),
 .burger-is-active + .header-burger rect:nth-child(2) {
     width: 28.2px;
 }
 
-.header-burger:not(.mobile):hover rect:nth-child(3),
+.header-burger:hover rect:nth-child(3),
 .burger-is-active + .header-burger rect:nth-child(3) {
     width: 24px;
 }
@@ -105,13 +105,13 @@
     border-bottom: none;
 }
 
-.mobile-menu-item:not(.mobile):hover {
+.mobile-menu-item:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 0.8);
     color: #c283f3;
     outline: 2px solid #d1a9f0;
 }
 
-.mobile-menu-item:not(.mobile):hover .mobile-menu-link-enter svg path {
+.mobile-menu-item:hover .mobile-menu-link-enter svg path {
     fill: #c283f3;
 }
 
@@ -174,7 +174,7 @@
     outline: 2px solid #7943A4;
 }
 
-.header-first-logo:not(.mobile):hover {
+.header-first-logo:hover {
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
     transform: scale(1.1);
@@ -212,7 +212,7 @@
     outline: 2px solid #7943a4;
 }
 
-.header-nav-list-link:not(.mobile):hover {   
+.header-nav-list-link:hover {   
     color: #c283f3;
     outline: none;
 }
@@ -245,12 +245,12 @@
     outline: 2px solid #7943a4;
 }
 
-.header-first-enter:not(.mobile):hover {   
+.header-first-enter:hover {   
     color: #c283f3;
     outline: none;
 }
 
-.header-first-enter:not(.mobile):hover svg path {
+.header-first-enter:hover svg path {
     fill: #c283f3;
 }
 
@@ -277,12 +277,12 @@
     outline: 2px solid #7943A4;
 }
 
-.header-search:not(.mobile):hover {
+.header-search:hover {
     outline: none;
 }
 
-.header-search:not(.mobile):hover rect,
-.header-search:not(.mobile):hover path {
+.header-search:hover rect,
+.header-search:hover path {
     fill: #c283f3;
 }
 
@@ -342,7 +342,7 @@
     outline: 2px solid #7943a4;
 }
 
-.form-control:not(.mobile):hover {
+.form-control:hover {
     color: #9d5cd0;
     background-image: url(../images/1-header/arrow-hover.svg);
     background-position: right center;
@@ -384,7 +384,7 @@
     margin-bottom: 20px;
 }
 
-.list-group-item:not(.mobile):hover {
+.list-group-item:hover {
     border: 2px solid #7943a4 !important;
 }
 
@@ -632,12 +632,12 @@
     fill: #c283f3;
 }
 
-.header-below-search:not(.mobile):hover input {
+.header-below-search:hover input {
     border-bottom: 1px solid #c283f3;
 }
 
-.header-below-search:not(.mobile):hover svg rect,
-.header-below-search:not(.mobile):hover svg path {
+.header-below-search:hover svg rect,
+.header-below-search:hover svg path {
     fill: #c283f3;
 }
 

@@ -81,15 +81,15 @@
     outline: 2px solid #7943a4;
 }
 
-.editions-first-checkbox span:not(.mobile):hover {
+.editions-first-checkbox span:hover {
     color: #c283f3;
 }
 
-.editions-first-checkbox span:not(.mobile):hover::before {
+.editions-first-checkbox span:hover::before {
     border: 1px solid #c283f3;
 }
 
-.editions-first-checkbox input:not(.mobile):hover + span {
+.editions-first-checkbox input:hover + span {
     outline: none;
 }
 
@@ -253,7 +253,7 @@
     outline: 2px solid #7943a4;
 }
 
-.editions-second-item-button:not(.mobile):hover {
+.editions-second-item-button:hover {
     background-color: #9d5cd0;
 }
 
@@ -286,8 +286,8 @@
     border: 2px solid #7943a4;
 }
 
-.editions-swiper-button-prev:not(.mobile):hover,
-.editions-swiper-button-next:not(.mobile):hover {
+.editions-swiper-button-prev:hover,
+.editions-swiper-button-next:hover {
     border: 2px solid #9d5cd0;
     background-image: url(../images/7-editions/nav-background-hover.svg);
 }
@@ -508,11 +508,11 @@
         cursor: pointer;
     }
 
-    .spoiler-head:not(.mobile):hover {
+    .spoiler-head:hover {
         color: #9d5cd0;
     }
 
-    .spoiler-head:not(.mobile):hover path {
+    .spoiler-head:hover path {
         stroke: #9d5cd0;
     }
 
@@ -542,11 +542,11 @@
         position: relative;
     }
 
-    .spoiler-item:not(.mobile):hover span {
+    .spoiler-item:hover span {
         color: #c283f3;
     }
 
-    .spoiler-item:not(.mobile):hover span::before {
+    .spoiler-item:hover span::before {
         border-color: #c283f3;
     }
 
@@ -596,20 +596,20 @@
         transition: width 300ms ease-in-out, height 300ms ease-in-out;
     }
 
-    .spoiler-item-close:not(.mobile):hover {
+    .spoiler-item-close:hover {
         background-color: rgba(194, 131, 243, 0.1);
     }
 
-    .spoiler-item-close:not(.mobile):hover {
+    .spoiler-item-close:hover {
         outline: 2px solid #9d5cd0;
     }
 
-    .spoiler-item-close:not(.mobile):hover svg {
+    .spoiler-item-close:hover svg {
         width: 30px;
         height: 28px;
     }
 
-    .spoiler-item-close:not(.mobile):hover path {
+    .spoiler-item-close:hover path {
         fill: #9d5cd0;
     }
 

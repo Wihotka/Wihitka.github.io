@@ -155,7 +155,7 @@
     outline: 2px solid #7943a4;
 }
 
-.events-block-link:not(.mobile):hover {
+.events-block-link:hover {
     font-weight: 700;
     outline: none;
 }
@@ -209,7 +209,7 @@
     outline: 2px solid #7943a4;
 }
 
-.events-button:not(.mobile):hover {
+.events-button:hover {
     color: #ffffff;
     background-color: #9d5cd0;
 }
