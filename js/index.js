@@ -120,7 +120,7 @@ window.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.tab').forEach(function(tabContent) {
                 tabContent.classList.remove('tab-active');
             });
-            document.querySelector(`[data-path="${path}"]`).querySelector('.tab').classList.add('tab-active');
+            document.querySelector(`[data-path="${path}"]`).parentNode.querySelector('.tab').classList.add('tab-active');
         })
     });
 
