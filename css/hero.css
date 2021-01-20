@@ -16,7 +16,7 @@
 
 .hero-heading {
     display: inline-block;
-    min-width: 597px;
+    max-width: 597px;
     margin-bottom: 20px;
     padding-right: 18px;
     font-size: 72px;
@@ -24,7 +24,7 @@
 }
 
 .hero-description {
-    min-width: 597px;
+    max-width: 597px;
     line-height: 30px;
 }
 
