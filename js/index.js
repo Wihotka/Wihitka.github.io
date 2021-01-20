@@ -1,4 +1,7 @@
 window.addEventListener('DOMContentLoaded', function() {
+    // Mobile Detect hovers
+    var md = new MobileDetect(navigator.userAgent),grade = md.mobileGrade();window.mobileDetect = md;
+
     // Navigation menu scroll
     $(document).ready(function(){
         $("#menu").on("click","a", function (event) {

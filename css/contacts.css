@@ -165,16 +165,23 @@
     }
     
     .contacts-first-subtitle {
-        margin-bottom: 16px;
+        margin-bottom: 0;
         font-size: 18px;
     }
 
     .contacts-first-form-input {
         width: 290px;
-        margin-bottom: 18px;
+        margin-top: 16px;
+        margin-bottom: 2px;
+    }
+
+    .js-validate-error-label {
+        font-size: 12px;
+        line-height: 12px;
     }
 
     .contacts-first-form-button {
+        margin-top: 16px;
         margin-bottom: 20px;
         padding: 12px 32px;
         font-size: 12px;
