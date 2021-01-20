@@ -84,7 +84,7 @@
     left: 107px;
 }
 
-.projects-description-tooltip:hover .projects-description-tooltip-text {
+.projects-description-tooltip:not(.mobile):hover .projects-description-tooltip-text {
     opacity: 1;
     visibility: visible;
 }
@@ -98,7 +98,7 @@
     outline: 2px solid #7943a4;
 }
 
-.projects-description-link:hover {
+.projects-description-link:not(.mobile):hover {
     border-bottom: 1px solid #9d5cd0;
     outline: none;
 }
@@ -179,7 +179,7 @@
     filter: grayscale(1) contrast(0.75) opacity(0.5);
 }
 
-.projects-item:hover img {
+.projects-item:not(.mobile):hover img {
         -webkit-filter: none;
     filter: none;
 }
@@ -212,14 +212,14 @@
     border: 2px solid #7943a4;
 }
 
-.projects-swiper-button-prev:hover,
-.projects-swiper-button-next:hover {
+.projects-swiper-button-prev:not(.mobile):hover,
+.projects-swiper-button-next:not(.mobile):hover {
     border: 2px solid #9d5cd0;
     background-image: url(../images/8-projects/nav-background-hover.svg);
 }
 
-.projects-swiper-button-prev:hover::after,
-.projects-swiper-button-next:hover::after {
+.projects-swiper-button-prev:not(.mobile):hover::after,
+.projects-swiper-button-next:not(.mobile):hover::after {
     color: #ffffff;
 }
 

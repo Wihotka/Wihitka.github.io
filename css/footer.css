@@ -36,7 +36,7 @@
     outline: 2px solid #ffffff;
 }
 
-.footer-logo:hover {
+.footer-logo:not(.mobile):hover {
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
     transform: scale(1.1);
@@ -84,7 +84,7 @@
     outline: 2px solid #ffffff;
 }
 
-.footer-link:hover {
+.footer-link:not(.mobile):hover {
         -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
     transform: scale(1.2);
