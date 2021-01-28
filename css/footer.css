@@ -5,7 +5,7 @@
     background-color: #000000;
 }
 
-.footer-content {
+.footer__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -14,7 +14,7 @@
     justify-content: flex-start;
 }
 
-.footer-logo {
+.footer__logo {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -25,37 +25,30 @@
         -webkit-box-pack: center;
         -ms-flex-pack: center;
     justify-content: center;
-        -webkit-transition: -webkit-transform 100ms ease-in-out;
-    transition: -webkit-transform 100ms ease-in-out;
-        -o-transition: transform 100ms ease-in-out;
-    transition: transform 100ms ease-in-out;
-    transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+        -webkit-transition: opacity 300ms ease-in-out, -webkit-transform 100ms ease-in-out;
+    transition: opacity 300ms ease-in-out, -webkit-transform 100ms ease-in-out;
+        -o-transition: transform 100ms ease-in-out, opacity 300ms ease-in-out;
+    transition: transform 100ms ease-in-out, opacity 300ms ease-in-out;
+    transition: transform 100ms ease-in-out, opacity 300ms ease-in-out, -webkit-transform 100ms ease-in-out;
 }
 
-.footer-logo:focus {
+.footer__logo:focus {
     outline: 2px solid #ffffff;
 }
 
-.footer-logo:hover {
+.footer__logo:active {
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
     transform: scale(1.1);
-    outline: none;
+    opacity: 0.5 !important;
+    outline: none !important;
 }
 
-.footer-logo:active {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    opacity: 0.5;
-    outline: none;
-}
-
-.footer-logo img[alt="Blanchard"] {
+.footer__logo img[alt="Blanchard"] {
     margin-bottom: 7px;
 }
 
-.footer-links {
+.footer__links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -65,7 +58,7 @@
     align-items: center;
 }
 
-.footer-link {
+.footer__link {
     display: inline-block;
     width: 45.4px;
     height: 45.4px;
@@ -73,41 +66,34 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 45.4px;
-        -webkit-transition: -webkit-transform 100ms ease-in-out;
-    transition: -webkit-transform 100ms ease-in-out;
-        -o-transition: transform 100ms ease-in-out;
-    transition: transform 100ms ease-in-out;
-    transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+        -webkit-transition: opacity 300ms ease-in-out, -webkit-transform 100ms ease-in-out;
+    transition: opacity 300ms ease-in-out, -webkit-transform 100ms ease-in-out;
+        -o-transition: transform 100ms ease-in-out, opacity 300ms ease-in-out;
+    transition: transform 100ms ease-in-out, opacity 300ms ease-in-out;
+    transition: transform 100ms ease-in-out, opacity 300ms ease-in-out, -webkit-transform 100ms ease-in-out;
 }
 
-.footer-link:focus {
+.footer__link:focus {
     outline: 2px solid #ffffff;
 }
 
-.footer-link:hover {
+.footer__link:active {
         -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
     transform: scale(1.2);
-    outline: none;
+    opacity: 0.5 !important;
+    outline: none !important;
 }
 
-.footer-link:active {
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    opacity: 0.5;
-    outline: none;
-}
-
-.footer-link-one {
+.footer__link_one {
     background-image: url(../images/11-footer/vk.svg);
 }
 
-.footer-link-two {
+.footer__link_two {
     background-image: url(../images/11-footer/instagram.svg);
 }
 
-.footer-link-three {
+.footer__link_three {
     margin-right: 0;
     background-image: url(../images/11-footer/fb.svg);
 }
@@ -118,23 +104,39 @@
         padding-bottom: 7px;
     }   
 
-    .footer-logo {
+    .footer__logo {
         width: 96.8px;
         height: auto;
     }
 
-    .footer-logo img[alt="Blanchard"] {
+    .footer__logo img[alt="Blanchard"] {
         margin-bottom: -4px;
     }
 
-    .footer-link {
+    .footer__link {
         width: 25px;
         height: 25px;
         margin-right: 13px;
         background-size: 25px;
     }
 
-    .footer-link-three {
+    .footer__link_three {
         margin-right: 0;
+    }
+}
+
+@media (hover: hover) {
+    .footer__logo:hover {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        outline: none;
+    }
+
+    .footer__link:hover {
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+        transform: scale(1.2);
+        outline: none;
     }
 }

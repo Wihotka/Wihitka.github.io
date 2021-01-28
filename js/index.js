@@ -10,8 +10,8 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
     // Header Menu
-    document.querySelector('.header-burger').addEventListener('click', function() {
-        document.querySelector('.mobile-menu').classList.toggle('burger-is-active');
+    document.querySelector('.header-menu__burger').addEventListener('click', function() {
+        document.querySelector('.header-menu__mobile-menu').classList.toggle('burger-active');
     });
 
     // Navigation mobile menu scroll
@@ -24,29 +24,23 @@ window.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Select Multiple Header
-    new MultipleSelect('#select-multiple-first', {
-        placeholder: 'Реализм'
-    });
+    // Spoiler header-submenu
+    jQuery(document).ready(function(){
+        jQuery('.header-submenu__list-item-button').click(function(){
+            $('.header-submenu__list-item-button').not(this).parents('.header-submenu__list-item').removeClass("header-submenu__list-item_active").find('.header-submenu__dropdown-menu').slideUp();
+            $(this).parents('.header-submenu__list-item').toggleClass("header-submenu__list-item_active").find('.header-submenu__dropdown-menu').slideToggle();
+        });
 
-    new MultipleSelect('#select-multiple-second', {
-        placeholder: 'Импрессионизм'
-    });
-
-    new MultipleSelect('#select-multiple-third', {
-        placeholder: 'Постимпрессионизм'
-    });
-
-    new MultipleSelect('#select-multiple-fourth', {
-        placeholder: 'Авангард'
-    });
-
-    new MultipleSelect('#select-multiple-fifth', {
-        placeholder: 'Футуризм'
+        $(document).mouseup(function (e){
+            if (!$('.header-submenu__list-item').is(e.target)
+                && $('.header-submenu__list-item').has(e.target).length === 0) {
+                $('.header-submenu__list-item-button').parents('.header-submenu__list-item').removeClass("header-submenu__list-item_active").find('.header-submenu__dropdown-menu').slideUp();
+            }
+        });
     });
 
     // Simple Bar
-    document.querySelectorAll('.dropdown-select').forEach(el => {
+    document.querySelectorAll('.header-submenu__dropdown-menu').forEach(el => {
         new SimpleBar(el, {autoHide: false, scrollbarMaxSize: 28}) 
     });
 
@@ -85,7 +79,35 @@ window.addEventListener('DOMContentLoaded', function() {
     // Swiper Gallery slider parameters
     var gallerySwiper = new Swiper('.gallery-swiper', {
         // Optional parameters
-        loop: true,
+        slidesPerColumn: 1,
+        slidesPerColumnFill: 'row',
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+        spaceBetween: 0,
+
+        // Responsive breakpoints
+        breakpoints: {
+            1301: {
+                slidesPerColumn: 2,
+                slidesPerGroup: 3,
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+
+            1025: {
+                slidesPerColumn: 2,
+                slidesPerGroup: 3,
+                slidesPerView: 3,
+                spaceBetween: 34,
+            },
+
+            701: {
+                slidesPerColumn: 2,
+                slidesPerGroup: 2,
+                slidesPerView: 2,
+                spaceBetween: 34,
+            },
+        },
 
         // If we need pagination
         pagination: {
@@ -102,7 +124,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
     // Gallery zoom
-    $(".gallery-second-image").magnificPopup({
+    $(".gallery-second__picture").magnificPopup({
         type: 'image',
         image: {
             titleSrc:'title',
@@ -113,14 +135,14 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
     // Tabs language
-    document.querySelectorAll('.catalog-flags-button').forEach(function(tabsBtn) {
+    document.querySelectorAll('.catalog__flag-button').forEach(function(tabsBtn) {
         tabsBtn.addEventListener('click', function(event) {
             const path = event.currentTarget.dataset.path;
 
-            document.querySelectorAll('.tab').forEach(function(tabContent) {
-                tabContent.classList.remove('tab-active');
+            document.querySelectorAll('.catalog__flag-tab').forEach(function(tabContent) {
+                tabContent.classList.remove('catalog__flag-tab_active');
             });
-            document.querySelector(`[data-path="${path}"]`).parentNode.querySelector('.tab').classList.add('tab-active');
+            document.querySelector(`[data-path="${path}"]`).parentNode.querySelector('.catalog__flag-tab').classList.add('catalog__flag-tab_active');
         })
     });
 
@@ -132,62 +154,85 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
     // Tabs catalog
-    document.querySelectorAll('.catalog-second-list-tab').forEach(function(tabsBtn) {
+    document.querySelectorAll('.catalog-second__list-tab').forEach(function(tabsBtn) {
         tabsBtn.addEventListener('click', function(event) {
             const path = event.currentTarget.dataset.path;
 
-            document.querySelectorAll('.catalog-second-list-tab').forEach(function(tabsHighlight) {
-                tabsHighlight.classList.remove('catalog-highlight');
+            document.querySelectorAll('.catalog-second__list-tab').forEach(function(tabsHighlight) {
+                tabsHighlight.classList.remove('catalog-second__highlight');
             });
-            document.querySelector(`[data-path="${path}"]`).classList.add('catalog-highlight');
+            document.querySelector(`[data-path="${path}"]`).classList.add('catalog-second__highlight');
 
-            document.querySelectorAll('.catalog-first-block').forEach(function(tabsRemove) {
-                tabsRemove.classList.remove('catalog-tab-active');
+            document.querySelectorAll('.catalog-first__block').forEach(function(tabsRemove) {
+                tabsRemove.classList.remove('catalog-first__tab_active');
             });
-            document.querySelector(`[data-name="${path}"]`).classList.add('catalog-tab-active');
+            document.querySelector(`[data-name="${path}"]`).classList.add('catalog-first__tab_active');
         })
     });
 
     // Swiper Events slider parameters
-    var gallerySwiper = new Swiper('.events-swiper', {
+    var gallerySwiper = new Swiper('.events__swiper', {
         // Optional parameters
         loop: true,
 
         // If we need pagination
         pagination: {
-            el: '.events-pagination',
+            el: '.events__pagination',
             clickable: true,
         },
     });
 
     // Spoiler Editions
     jQuery(document).ready(function(){
-        jQuery('.spoiler-head').click(function(){
-            $(this).parents('.spoiler-wrap').toggleClass("active").find('.unchecked').slideToggle();
-            $(this).parents('.spoiler-wrap').toggleClass("disabled");
+        jQuery('.editions-first__spoiler-head').click(function(){
+            $(this).parents('.editions-first__spoiler').toggleClass("editions-first__spoiler_active").find('.editions-first__spoiler-item_unchecked').slideToggle();
+            $(this).parents('.editions-first__spoiler').toggleClass("editions-first__spoiler_disabled");
         });
 
-        jQuery('.spoiler-item').click(function(e){
+        jQuery('.editions-first__spoiler-item').click(function(e){
             e.preventDefault();
-            $(this).toggleClass("unchecked");
-            $(this).toggleClass("checked");
+            $(this).toggleClass("editions-first__spoiler-item_unchecked");
+            $(this).toggleClass("editions-first__spoiler-item_checked");
         });
 
-        jQuery('.spoiler-item-close').click(function(){
-            $(this).parents('.spoiler-item').slideUp();
+        jQuery('.editions-first__spoiler-item-close').click(function(){
+            $(this).parents('.editions-first__spoiler-item').slideUp();
         });
     });
 
     // Tab events
-    document.querySelector('.events-button').addEventListener('click', function(event) {
-        document.querySelector('.events-blocks-extra').classList.add('events-blocks-active');
-        document.querySelector('.events-forbutton').classList.add('events-forbutton-none');
+    document.querySelector('.events__button').addEventListener('click', function(event) {
+        document.querySelector('.events__blocks-extra').classList.add('events__blocks-active');
+        document.querySelector('.events__button-content').classList.add('events__button-content-none');
     });
 
     // Swiper Editions slider parameters 
     var editionsSwiper = new Swiper('.editions-swiper', {
         // Optional parameters
-        loop: true,
+        slidesPerGroup: 2,
+        slidesPerView: 2,
+        spaceBetween: 34,
+
+        // Responsive breakpoints
+        breakpoints: {
+            1301: {
+                slidesPerGroup: 3,
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+
+            1025: {
+                slidesPerGroup: 3,
+                slidesPerView: 3,
+                spaceBetween: 25,
+            },
+
+            769: {
+                slidesPerGroup: 2,
+                slidesPerView: 2,
+                spaceBetween: 49,
+            },
+        },
 
         // If we need pagination
         pagination: {
@@ -206,17 +251,41 @@ window.addEventListener('DOMContentLoaded', function() {
     // Swiper Projects slider parameters
     var projectsSwiper = new Swiper('.projects-swiper', {
         // Optional parameters
-        loop: true,
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+        spaceBetween: 0,
+
+        // Responsive breakpoints
+        breakpoints: {
+            1551: {
+                slidesPerGroup: 3,
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+
+            1025: {
+                slidesPerGroup: 3,
+                slidesPerView: 3,
+                spaceBetween: 34,
+            },
+
+            769: {
+                slidesPerGroup: 2,
+                slidesPerView: 2,
+                spaceBetween: 50,
+            },
+
+            701: {
+                slidesPerGroup: 2,
+                slidesPerView: 2,
+                spaceBetween: 34,
+            },
+        },
 
         // Navigation arrows
         navigation: {
             nextEl: '.projects-swiper-button-next',
             prevEl: '.projects-swiper-button-prev',
-        },
-
-        // Autoplay slider
-        autoplay: {
-            delay: 4000,
         },
     });
 
@@ -227,7 +296,7 @@ window.addEventListener('DOMContentLoaded', function() {
     im.mask(selector);
 
     // Just Validate
-    new JustValidate('.contacts-first-form', {
+    new JustValidate('.contacts-first__form', {
         rules: {
             name: {
                 required: true,

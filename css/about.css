@@ -5,14 +5,14 @@
     font-style: normal;
 }
 
-.about-heading {
+.about__heading {
     margin-bottom: 17px;
     font-weight: 400;
     font-size: 48px;
     line-height: 65.37px;
 }
 
-.about-description {
+.about__description {
     max-width: 1080px;
 }
 
@@ -22,13 +22,13 @@
         padding-bottom: 42px;
     } 
 
-    .about-heading {
+    .about__heading {
         margin-bottom: 11px;
         font-size: 28px;
         line-height: 38.13px;
     }
 
-    .about-description {
+    .about__description {
         font-size: 14px;
         line-height: 28px;
     }

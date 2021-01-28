@@ -1,5 +1,6 @@
 .hero {
     position: relative;
+    margin-top: -71px;
     padding: 142px 0 122px 0;
     font-weight: 700;
     font-size: 18px;
@@ -26,6 +27,7 @@
 .hero-description {
     max-width: 597px;
     line-height: 30px;
+    margin-bottom: 92px;
 }
 
 .hero-link {
@@ -33,25 +35,23 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    margin-top: 92px;
     padding: 16px 32px;
     border: 3px solid #9d5cd0;
     border-radius: 100px;
     font-weight: 700;
     color: #ffffff;
     background-color: #9d5cd0;
+        -webkit-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
+        -o-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
+    transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
 }
 
 .hero-link:focus {
     border: 3px solid #7943a4;
 }
 
-.hero-link:hover {
-    border: 3px solid #d1a9f0;
-}
-
 .hero-link:active {
-    border: 3px solid #d1a9f0;
+    border: 3px solid #d1a9f0 !important;
     background-color: #7943a4;
 }
 
@@ -119,6 +119,7 @@
 
 @media (max-width: 1024px) {
     .hero {
+        margin-top: 0;
         padding: 113px 0;
     }
 
@@ -131,10 +132,10 @@
     .hero-description {
         max-width: 661px;
         min-width: 320px;
+        margin-bottom: 135px;
     }
 
     .hero-link {
-        margin-top: 135px;
         padding: 16px 32px;
     }
 }
@@ -155,6 +156,7 @@
 
     .hero-description {
         min-width: 100%;
+        margin-bottom: 41px;
         padding-right: 10px;
         padding-left: 10px;
         font-size: 12px;
@@ -164,11 +166,16 @@
     }
 
     .hero-link {
-        margin-top: 41px;
         margin-right: auto;
         margin-left: auto;
         padding: 9px 17px;
         font-size: 12px;
         line-height: 16.34px;
+    }
+}
+
+@media (hover: hover) {
+    .hero-link:hover {
+        border: 3px solid #d1a9f0;
     }
 }

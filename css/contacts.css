@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.contacts-heading {
+.contacts__heading {
     margin-bottom: 26px;
     font-weight: 400;
     font-size: 48px;
@@ -23,22 +23,22 @@
     height: 690px;
 }
 
-.contacts-first-name {
+.contacts-first__name {
     margin-bottom: 2px;
     font-weight: 600;
     font-size: 24px;
 }
 
-.contacts-first-adress {
+.contacts-first__adress {
     margin-bottom: 26px;
 }
 
-.contacts-first-subtitle {
+.contacts-first__subtitle {
     margin-bottom: 18px;
     font-size: 24px;
 }
 
-.contacts-first-form {
+.contacts-first__form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -48,7 +48,7 @@
     flex-direction: column;
 }
 
-.contacts-first-form-input {
+.contacts-first__form-input {
     width: 400px;
     margin-bottom: 20px;
     padding: 11px 24px;
@@ -57,11 +57,11 @@
     background-color: inherit;
 }
 
-.contacts-first-form-input:nth-child(2) {
+.contacts-first__form-input:nth-child(2) {
     margin-bottom: 18px;
 }
 
-.contacts-first-form-button {
+.contacts-first__form-button {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -73,61 +73,62 @@
     font-size: 18px;
     color: #9d5cd0;
     background-color: inherit;
+        -webkit-transition: color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+        -o-transition: color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+    transition: color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
 }
 
-.contacts-first-form-button:focus span {
+.contacts-first__form-button:focus span {
     outline: 2px solid #7943a4;
 }
 
-.contacts-first-form-button:hover {
-    color: #ffffff;
-    background-color: #9d5cd0;
-    outline: none;
+.contacts-first__form-button:active {
+    border: 2px solid #d1a9f0 !important;
+    background-color: #7943a4 !important;
 }
 
-.contacts-first-form-button:active {
-    border: 2px solid #d1a9f0;
-    background-color: #7943a4;
+.contacts-first__form-button:active span {
+    outline: none !important;
 }
-.contacts-first-subtitle-links {
+
+.contacts-first__subtitle_links {
     margin-bottom: 16px;
     font-size: 24px;
 }
 
-.contacts-first-link {
+.contacts-first__link {
     display: inline-block;
     width: 40px;
     height: 40px;
+        -webkit-transition: opacity 300ms ease-in-out, -webkit-filter 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out, -webkit-filter 300ms ease-in-out;
+        -o-transition: filter 300ms ease-in-out, opacity 300ms ease-in-out;
+    transition: filter 300ms ease-in-out, opacity 300ms ease-in-out;
+    transition: filter 300ms ease-in-out, opacity 300ms ease-in-out, -webkit-filter 300ms ease-in-out;
 }
 
-.contacts-first-link:focus {
+.contacts-first__link:focus {
     outline: 2px solid #9d5cd0;
 }
 
-.contacts-first-link:hover {
-        -webkit-filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
-    filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
-    outline: none;
+.contacts-first__link:active {
+    opacity: 0.6 !important;
+    outline: none !important;
 }
 
-.contacts-first-link:active {
-    opacity: 0.6;
-    outline: none;
-}
-
-.contacts-first-link-one {
+.contacts-first__link_one {
     margin-right: 16px;
     background-image: url(../images/9-contacts/whatsapp.svg);
     background-repeat: no-repeat;
 }
 
-.contacts-first-link-two {
+.contacts-first__link_two {
     background-image: url(../images/9-contacts/telegram.svg);
     background-repeat: no-repeat;
 }
 
 @media (max-width: 1024px) {
-    .contacts-first-form-input {
+    .contacts-first__form-input {
         width: 335px;
     }
 }
@@ -137,7 +138,7 @@
         padding-bottom: 30px;
     }
 
-    .contacts-heading {
+    .contacts__heading {
         margin-bottom: 12px;
         font-size: 28px;
         line-height: 38.13px;
@@ -152,24 +153,24 @@
         height: fit-content;
     }
 
-    .contacts-first-name {
+    .contacts-first__name {
         margin-bottom: 0;
         font-size: 18px;
         line-height: 24.51px;
     }
     
-    .contacts-first-adress {
+    .contacts-first__adress {
         margin-bottom: 355px;
         font-size: 14px;
         line-height: 19px;
     }
     
-    .contacts-first-subtitle {
+    .contacts-first__subtitle {
         margin-bottom: 0;
         font-size: 18px;
     }
 
-    .contacts-first-form-input {
+    .contacts-first__form-input {
         width: 290px;
         margin-top: 16px;
         margin-bottom: 2px;
@@ -180,15 +181,32 @@
         line-height: 12px;
     }
 
-    .contacts-first-form-button {
+    .contacts-first__form-button {
         margin-top: 16px;
         margin-bottom: 20px;
         padding: 12px 32px;
         font-size: 12px;
     }
 
-    .contacts-first-subtitle-links {
+    .contacts-first__subtitle_links {
         margin-bottom: 7px;
         font-size: 18px;
+    }
+}
+
+@media (hover: hover) {
+    .contacts-first__form-button:hover {
+        color: #ffffff;
+        background-color: #9d5cd0;
+    }
+
+    .contacts-first__form-button:hover span {
+        outline: none;
+    }
+
+    .contacts-first__link:hover {
+            -webkit-filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+        filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+        outline: none;
     }
 }
