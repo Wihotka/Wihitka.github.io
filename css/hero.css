@@ -51,7 +51,7 @@
 }
 
 .hero-link:active {
-    border: 3px solid #d1a9f0 !important;
+    border: 3px solid #d1a9f0;
     background-color: #7943a4;
 }
 
@@ -177,5 +177,10 @@
 @media (hover: hover) {
     .hero-link:hover {
         border: 3px solid #d1a9f0;
+    }
+
+    .hero-link:active {
+        border: 3px solid #d1a9f0;
+        background-color: #7943a4;
     }
 }

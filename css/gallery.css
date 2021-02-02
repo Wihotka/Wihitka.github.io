@@ -131,9 +131,9 @@
 }
 
 .gallery-first__link:active {
-    border-bottom: none !important;
+    border-bottom: none;
     color: #7943a4;
-    outline: none !important;
+    outline: none;
 }
 
 .gallery-second {
@@ -210,8 +210,8 @@
 
 .gallery-swiper-button-prev:active,
 .gallery-swiper-button-next:active {
-    border: 2px solid #d1a9f0 !important;
-    background-image: url(../images/4-gallery/nav-background-active.svg) !important;
+    border: 2px solid #d1a9f0;
+    background-image: url(../images/4-gallery/nav-background-active.svg);
 }
 
 .gallery-swiper-button-prev::after,
@@ -232,8 +232,76 @@
     --swiper-theme-color: none !important;
 }
 
+.mfp-bg {
+    opacity: 0 !important;
+}
+
+@keyframes modalAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+.mfp-zoom-out-cur .mfp-bg {
+    opacity: 0.8 !important;
+    animation: modalAnimation 300ms linear alternate;
+}
+
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
     cursor: pointer !important;
+}
+
+.mfp-wrap {
+    position: fixed !important;
+    top: 0 !important;
+}
+
+.mfp-image-holder .mfp-content {
+    width: 40%;
+}
+
+.mfp-content {
+    opacity: 0;
+}
+
+@keyframes modalContentAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.mfp-zoom-out-cur .mfp-content {
+    opacity: 1;
+    animation: modalContentAnimation 300ms linear alternate;
+}
+
+img.mfp-img {
+    width: 100% !important;
+}
+
+.mfp-bottom-bar {
+    top: 99% !important;
+    padding: 18px 0;
+    border-top: 2px solid #7943a4;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #ffffff;
+}
+
+.mfp-title {
+    padding-left: 36px;
+    font-weight: 700;
+    color: #333333 !important;
 }
 
 @media (max-width: 1300px) {
@@ -373,6 +441,12 @@
         outline: none;
     }
 
+    .gallery-first__link:active {
+        border-bottom: none;
+        color: #7943a4;
+        outline: none;
+    }
+
     .gallery-second__picture:hover .gallery-second__loop {
         opacity: 1;
     }
@@ -381,5 +455,11 @@
     .gallery-swiper-button-next:hover {
         border: 2px solid #9d5cd0;
         background-image: url(../images/4-gallery/nav-background-hover.svg);
+    }
+
+    .gallery-swiper-button-prev:active,
+    .gallery-swiper-button-next:active {
+        border: 2px solid #d1a9f0;
+        background-image: url(../images/4-gallery/nav-background-active.svg);
     }
 }

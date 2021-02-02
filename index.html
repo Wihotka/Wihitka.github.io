@@ -48,16 +48,17 @@
     <header class="header">
         <div class="header-menu">
             <div class="header-menu__content container">
-                <div class="header-menu__mobile-menu" id="mobile-menu">
-                    <ul class="header-menu__mobile-menu-list">
-                        <li class="header-menu__mobile-menu-item"><a href="#nav-about" class="header-menu__mobile-menu-link">О нас</a></li>
-                        <li class="header-menu__mobile-menu-item"><a href="#nav-gallery" class="header-menu__mobile-menu-link">Галерея</a></li>
-                        <li class="header-menu__mobile-menu-item"><a href="#nav-catalog" class="header-menu__mobile-menu-link">Каталог</a></li>
-                        <li class="header-menu__mobile-menu-item"><a href="#nav-events" class="header-menu__mobile-menu-link">События</a></li>
-                        <li class="header-menu__mobile-menu-item"><a href="#nav-editions" class="header-menu__mobile-menu-link">Издания</a></li>
-                        <li class="header-menu__mobile-menu-item"><a href="#nav-projects" class="header-menu__mobile-menu-link">Проекты</a></li>
-                        <li class="header-menu__mobile-menu-item"><a href="#nav-contacts" class="header-menu__mobile-menu-link">Контакты</a></li>
-                        <li class="header-menu__mobile-menu-item"><a href="#" class="header-menu__mobile-menu-link header-menu__mobile-menu-link_enter">
+                <h1 class="header__title">Blanchard - Художественная галлерея</h1>
+                <div class="header-menu__mobile" id="mobile">
+                    <ul class="header-menu__mobile-list">
+                        <li class="header-menu__mobile-item"><a href="#nav-about" class="header-menu__mobile-link">О нас</a></li>
+                        <li class="header-menu__mobile-item"><a href="#nav-gallery" class="header-menu__mobile-link">Галерея</a></li>
+                        <li class="header-menu__mobile-item"><a href="#nav-catalog" class="header-menu__mobile-link">Каталог</a></li>
+                        <li class="header-menu__mobile-item"><a href="#nav-events" class="header-menu__mobile-link">События</a></li>
+                        <li class="header-menu__mobile-item"><a href="#nav-editions" class="header-menu__mobile-link">Издания</a></li>
+                        <li class="header-menu__mobile-item"><a href="#nav-projects" class="header-menu__mobile-link">Проекты</a></li>
+                        <li class="header-menu__mobile-item"><a href="#nav-contacts" class="header-menu__mobile-link">Контакты</a></li>
+                        <li class="header-menu__mobile-item"><a href="#" class="header-menu__mobile-link header-menu__mobile-link_enter">
                             <span>Войти</span>
                             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
@@ -74,30 +75,29 @@
                 </button>
                 <a href="#" aria-label="Логотип" class="header-menu__logo">
                     <img src="images/1-header/logo.svg" alt="Blanchard">
-                    <img src="images/1-header/logo-caption.svg" alt="художественная галерея">
                 </a>
                 <nav class="header-menu__nav-menu" id="menu">
-                    <ul class="header-menu__nav-list">
-                        <li class="header-menu__nav-list-item">
-                            <a href="#nav-about" class="header-menu__nav-list-link">О нас</a>
+                    <ul class="header-menu__nav">
+                        <li class="header-menu__nav-item">
+                            <a href="#nav-about" class="header-menu__nav-link">О нас</a>
                         </li>
-                        <li class="header-menu__nav-list-item">
-                            <a href="#nav-gallery" class="header-menu__nav-list-link">Галерея</a>
+                        <li class="header-menu__nav-item">
+                            <a href="#nav-gallery" class="header-menu__nav-link">Галерея</a>
                         </li>
-                        <li class="header-menu__nav-list-item">
-                            <a href="#nav-catalog" class="header-menu__nav-list-link">Каталог</a>
+                        <li class="header-menu__nav-item">
+                            <a href="#nav-catalog" class="header-menu__nav-link">Каталог</a>
                         </li>
-                        <li class="header-menu__nav-list-item">
-                            <a href="#nav-events" class="header-menu__nav-list-link">События</a>
+                        <li class="header-menu__nav-item">
+                            <a href="#nav-events" class="header-menu__nav-link">События</a>
                         </li>
-                        <li class="header-menu__nav-list-item">
-                            <a href="#nav-editions" class="header-menu__nav-list-link">Издания</a>
+                        <li class="header-menu__nav-item">
+                            <a href="#nav-editions" class="header-menu__nav-link">Издания</a>
                         </li>
-                        <li class="header-menu__nav-list-item">
-                            <a href="#nav-projects" class="header-menu__nav-list-link">Проекты</a>
+                        <li class="header-menu__nav-item">
+                            <a href="#nav-projects" class="header-menu__nav-link">Проекты</a>
                         </li>
-                        <li class="header-menu__nav-list-item">
-                            <a href="#nav-contacts" class="header-menu__nav-list-link">Контакты</a>
+                        <li class="header-menu__nav-item">
+                            <a href="#nav-contacts" class="header-menu__nav-link">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -119,85 +119,95 @@
             <div class="header-submenu__content container">
                 <ul class="header-submenu__list">
                     <li class="header-submenu__list-item">
-                        <button class="header-submenu__list-item-button">
+                        <button class="header-submenu__list-button">
                             <span class="header-submenu__list-item-text">Реализм</span>
                             <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 5L6 10L0.999997 5" stroke="white"/>
                             </svg> 
                         </button>
-                        <ul class="header-submenu__dropdown-menu header-submenu__dropdown-menu_first">
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BD%D1%91%D1%80,_%D0%A0%D0%BE%D0%B7%D0%B0" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Роза Бонёр</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BF%D0%B8%D0%BD,_%D0%98%D0%BB%D1%8C%D1%8F_%D0%95%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D0%B8%D1%87" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Илья Репин</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%98%D0%BA%D0%B8%D0%BD%D1%81,_%D0%A2%D0%BE%D0%BC%D0%B0%D1%81" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Томас Икинс</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5,_%D0%96%D0%B0%D0%BD-%D0%A4%D1%80%D0%B0%D0%BD%D1%81%D1%83%D0%B0" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Жан-Франсуа Милле</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A3%D0%B0%D0%B9%D0%B5%D1%82,_%D0%AD%D0%BD%D0%B4%D1%80%D1%8E" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Эндрю Уайет</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D1%80%D0%B1%D0%B5,_%D0%93%D1%8E%D1%81%D1%82%D0%B0%D0%B2" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Гюстав Курбе</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A5%D0%BE%D0%BF%D0%BF%D0%B5%D1%80,_%D0%AD%D0%B4%D0%B2%D0%B0%D1%80%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Эдвард Хоппер</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B5,_%D0%AD%D0%B4%D1%83%D0%B0%D1%80%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Эдуард Мане</a></li>
-                        </ul>
+                        <div class="header-submenu__dropdown-menu header-submenu__dropdown-menu_first">
+                            <ul class="header-submenu__dropdown-list">
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BD%D1%91%D1%80,_%D0%A0%D0%BE%D0%B7%D0%B0" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Роза Бонёр</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BF%D0%B8%D0%BD,_%D0%98%D0%BB%D1%8C%D1%8F_%D0%95%D1%84%D0%B8%D0%BC%D0%BE%D0%B2%D0%B8%D1%87" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Илья Репин</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%98%D0%BA%D0%B8%D0%BD%D1%81,_%D0%A2%D0%BE%D0%BC%D0%B0%D1%81" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Томас Икинс</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5,_%D0%96%D0%B0%D0%BD-%D0%A4%D1%80%D0%B0%D0%BD%D1%81%D1%83%D0%B0" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Жан-Франсуа Милле</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A3%D0%B0%D0%B9%D0%B5%D1%82,_%D0%AD%D0%BD%D0%B4%D1%80%D1%8E" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Эндрю Уайет</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D1%80%D0%B1%D0%B5,_%D0%93%D1%8E%D1%81%D1%82%D0%B0%D0%B2" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Гюстав Курбе</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A5%D0%BE%D0%BF%D0%BF%D0%B5%D1%80,_%D0%AD%D0%B4%D0%B2%D0%B0%D1%80%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Эдвард Хоппер</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B5,_%D0%AD%D0%B4%D1%83%D0%B0%D1%80%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Эдуард Мане</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="header-submenu__list-item">
-                        <button class="header-submenu__list-item-button">
+                        <button class="header-submenu__list-button">
                             <span class="header-submenu__list-item-text">Импрессионизм</span>
                             <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 5L6 10L0.999997 5" stroke="white"/>
                             </svg> 
                         </button>
-                        <ul class="header-submenu__dropdown-menu header-submenu__dropdown-menu_second">
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D0%BB%D0%B5%D0%B9,_%D0%90%D0%BB%D1%8C%D1%84%D1%80%D0%B5%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Альфред Сислей</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B0%D0%BD_%D0%93%D0%BE%D0%B3,_%D0%92%D0%B8%D0%BD%D1%81%D0%B5%D0%BD%D1%82" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Ван Гог</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B8%D1%81%D1%81%D0%B0%D1%80%D1%80%D0%BE,_%D0%9A%D0%B0%D0%BC%D0%B8%D0%BB%D1%8C" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Камиль Писсарро</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B5,_%D0%9A%D0%BB%D0%BE%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Клод Моне</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D0%BD,_%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B5%D0%B2%D0%B8%D1%87" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Константин Коровин</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D0%B3%D0%B5%D0%BD,_%D0%9F%D0%BE%D0%BB%D1%8C" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Поль Гоген</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B7%D0%B0%D0%BD%D0%BD,_%D0%9F%D0%BE%D0%BB%D1%8C" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Поль Сезанн</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%B3%D0%B0,_%D0%AD%D0%B4%D0%B3%D0%B0%D1%80" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Эдгар Дега</a></li>
-                        </ul>
+                        <div class="header-submenu__dropdown-menu header-submenu__dropdown-menu_second">
+                            <ul class="header-submenu__dropdown-list">
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D0%BB%D0%B5%D0%B9,_%D0%90%D0%BB%D1%8C%D1%84%D1%80%D0%B5%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Альфред Сислей</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B0%D0%BD_%D0%93%D0%BE%D0%B3,_%D0%92%D0%B8%D0%BD%D1%81%D0%B5%D0%BD%D1%82" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Ван Гог</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%B8%D1%81%D1%81%D0%B0%D1%80%D1%80%D0%BE,_%D0%9A%D0%B0%D0%BC%D0%B8%D0%BB%D1%8C" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Камиль Писсарро</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B5,_%D0%9A%D0%BB%D0%BE%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Клод Моне</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D0%BD,_%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B5%D0%B2%D0%B8%D1%87" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Константин Коровин</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D0%B3%D0%B5%D0%BD,_%D0%9F%D0%BE%D0%BB%D1%8C" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Поль Гоген</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B7%D0%B0%D0%BD%D0%BD,_%D0%9F%D0%BE%D0%BB%D1%8C" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Поль Сезанн</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%B3%D0%B0,_%D0%AD%D0%B4%D0%B3%D0%B0%D1%80" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Эдгар Дега</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="header-submenu__list-item">
-                        <button class="header-submenu__list-item-button">
+                        <button class="header-submenu__list-button">
                             <span class="header-submenu__list-item-text">Постимпрессионизм</span>
                             <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 5L6 10L0.999997 5" stroke="white"/>
                             </svg> 
                         </button>
-                        <ul class="header-submenu__dropdown-menu header-submenu__dropdown-menu_third">
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D0%BD%D0%BA,_%D0%AD%D0%B4%D0%B2%D0%B0%D1%80%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Эдвард Мунк</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5_%D0%A5%D0%B0%D0%BD,_%D0%9C%D0%B5%D0%B9%D0%B5%D1%80" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Мейер де Хан</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9E%E2%80%99%D0%9A%D0%BE%D0%BD%D0%BE%D1%80,_%D0%A0%D0%BE%D0%B4%D0%B5%D1%80%D0%B8%D0%BA" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Родерик О’Конор</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%91%D1%80%D0%B0,_%D0%96%D0%BE%D1%80%D0%B6" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Жорж Сёра</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BA%D0%B5%D1%80%D1%82,_%D0%A3%D0%BE%D0%BB%D1%82%D0%B5%D1%80" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Уолтер Сикерт</a></li>
-                        </ul>
+                        <div class="header-submenu__dropdown-menu header-submenu__dropdown-menu_third">
+                            <ul class="header-submenu__dropdown-list">
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D1%83%D0%BD%D0%BA,_%D0%AD%D0%B4%D0%B2%D0%B0%D1%80%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Эдвард Мунк</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5_%D0%A5%D0%B0%D0%BD,_%D0%9C%D0%B5%D0%B9%D0%B5%D1%80" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Мейер де Хан</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9E%E2%80%99%D0%9A%D0%BE%D0%BD%D0%BE%D1%80,_%D0%A0%D0%BE%D0%B4%D0%B5%D1%80%D0%B8%D0%BA" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Родерик О’Конор</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%91%D1%80%D0%B0,_%D0%96%D0%BE%D1%80%D0%B6" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Жорж Сёра</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D0%BA%D0%B5%D1%80%D1%82,_%D0%A3%D0%BE%D0%BB%D1%82%D0%B5%D1%80" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Уолтер Сикерт</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="header-submenu__list-item">
-                        <button class="header-submenu__list-item-button">
+                        <button class="header-submenu__list-button">
                             <span class="header-submenu__list-item-text">Авангард</span>
                             <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 5L6 10L0.999997 5" stroke="white"/>
                             </svg> 
                         </button>
-                        <ul class="header-submenu__dropdown-menu header-submenu__dropdown-menu_fourth">
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B5%D0%B2%D0%B8%D1%87,_%D0%9A%D0%B0%D0%B7%D0%B8%D0%BC%D0%B8%D1%80_%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%B8%D0%BD%D0%BE%D0%B2%D0%B8%D1%87" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Казимир Малевич</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B0%D0%BB%D0%B8,_%D0%A1%D0%B0%D0%BB%D1%8C%D0%B2%D0%B0%D0%B4%D0%BE%D1%80" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Сальвадор Дали</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%81,_%D0%A0%D0%B8%D1%87%D0%B0%D1%80%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Ричард Принс</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B6%D0%B0%D0%BD_%D0%A1%D1%8F%D0%BE%D0%B3%D0%B0%D0%BD" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Чжан Сяоган</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B8%D1%85%D1%82%D0%B5%D1%80,_%D0%93%D0%B5%D1%80%D1%85%D0%B0%D1%80%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Герхард Рихтер</a></li>
-                        </ul>
+                        <div class="header-submenu__dropdown-menu header-submenu__dropdown-menu_fourth">
+                            <ul class="header-submenu__dropdown-list">
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B5%D0%B2%D0%B8%D1%87,_%D0%9A%D0%B0%D0%B7%D0%B8%D0%BC%D0%B8%D1%80_%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%B8%D0%BD%D0%BE%D0%B2%D0%B8%D1%87" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Казимир Малевич</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%94%D0%B0%D0%BB%D0%B8,_%D0%A1%D0%B0%D0%BB%D1%8C%D0%B2%D0%B0%D0%B4%D0%BE%D1%80" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Сальвадор Дали</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%BD%D1%81,_%D0%A0%D0%B8%D1%87%D0%B0%D1%80%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Ричард Принс</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B6%D0%B0%D0%BD_%D0%A1%D1%8F%D0%BE%D0%B3%D0%B0%D0%BD" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Чжан Сяоган</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B8%D1%85%D1%82%D0%B5%D1%80,_%D0%93%D0%B5%D1%80%D1%85%D0%B0%D1%80%D0%B4" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Герхард Рихтер</a></li>
+                            </ul>
+                        </div>
                     </li>
                     <li class="header-submenu__list-item">
-                        <button class="header-submenu__list-item-button">
+                        <button class="header-submenu__list-button">
                             <span class="header-submenu__list-item-text">Футуризм</span>
                             <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M11 5L6 10L0.999997 5" stroke="white"/>
                             </svg> 
                         </button>
-                        <ul class="header-submenu__dropdown-menu header-submenu__dropdown-menu_fifth">
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%BB%D1%8C%D0%B1%D0%B8%D0%BD,_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Николай Кульбин</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%BB%D0%BB%D0%B0,_%D0%94%D0%B6%D0%B0%D0%BA%D0%BE%D0%BC%D0%BE" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Джакомо Балла</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D1%80%D0%B5%D1%81_%D0%93%D0%B0%D1%80%D1%81%D0%B8%D1%8F,_%D0%A5%D0%BE%D0%B0%D0%BA%D0%B8%D0%BD" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Хоакин Т. Гарсия</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B5%D0%BB%D0%BB%D0%B0,_%D0%94%D0%B6%D0%BE%D0%B7%D0%B5%D1%84" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Джозеф Стелла</a></li>
-                            <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D1%80%D0%B0,_%D0%9A%D0%B0%D1%80%D0%BB%D0%BE" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Карло Карра</a></li>
-                        </ul>
+                        <div class="header-submenu__dropdown-menu header-submenu__dropdown-menu_fifth">
+                            <ul class="header-submenu__dropdown-list">
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D1%83%D0%BB%D1%8C%D0%B1%D0%B8%D0%BD,_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Николай Кульбин</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%BB%D0%BB%D0%B0,_%D0%94%D0%B6%D0%B0%D0%BA%D0%BE%D0%BC%D0%BE" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Джакомо Балла</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D1%80%D1%80%D0%B5%D1%81_%D0%93%D0%B0%D1%80%D1%81%D0%B8%D1%8F,_%D0%A5%D0%BE%D0%B0%D0%BA%D0%B8%D0%BD" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Хоакин Т. Гарсия</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B5%D0%BB%D0%BB%D0%B0,_%D0%94%D0%B6%D0%BE%D0%B7%D0%B5%D1%84" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Джозеф Стелла</a></li>
+                                <li class="header-submenu__dropdown-item"><a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D1%80%D1%80%D0%B0,_%D0%9A%D0%B0%D1%80%D0%BB%D0%BE" rel="noopener" target="_blank" class="header-submenu__dropdown-link">Карло Карра</a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
                 <form class="header-submenu__search" data-simple-search="http://a-simple-search-service.com">
@@ -462,7 +472,7 @@
                             <button class="catalog__flag-button" data-path="three">
                                 <img src="images/5-catalog/icon-italy.png" alt="Италия" class="catalog__flag-image">
                             </button>
-                            <div class="catalog__flag-tab"></div>
+                            <div class="catalog__flag-tab catalog__flag-tab_active"></div>
                         </div>
                         <div class="catalog__flag">
                             <button class="catalog__flag-button" data-path="four">
@@ -684,7 +694,13 @@
                             </svg>
                         </div>
                         <div class="catalog-second__basic">
-                            <ul class="catalog-second__list">
+                            <div class="catalog-second__list" data-list="one">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consectetur at ratione culpa ipsum error laborum. Perspiciatis omnis iure dignissimos deserunt earum, at totam! Quam velit quis ea obcaecati aut?</p>
+                            </div>
+                            <div class="catalog-second__list" data-list="two">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consectetur at ratione culpa ipsum error laborum. Perspiciatis omnis iure dignissimos deserunt earum, at totam! Quam velit quis ea obcaecati aut?</p>
+                            </div>
+                            <ul class="catalog-second__list catalog-second__list_active" data-list="three">
                                 <!-- First column -->
                                 <li class="catalog-second__list-item"><button class="catalog-second__list-tab" data-path="Бенедетто ди Биндо">Бенедетто ди Биндо</button></li>
                                 <li class="catalog-second__list-item"><button class="catalog-second__list-tab" data-path="Бергоньоне, Амброджо">Бергоньоне, Амброджо</button></li>
@@ -698,7 +714,7 @@
                                 <!-- Second column -->
                                 <li class="catalog-second__list-item"><button class="catalog-second__list-tab" data-path="Веккьетта">Веккьетта</button></li>
                                 <li class="catalog-second__list-item"><button class="catalog-second__list-tab" data-path="Андреа Верроккьо">Андреа Верроккьо</button></li>
-                                <li class="catalog-second__list-item"><button class="catalog-second__list-tab" data-path="Доменико Гирландайо">Доменико Гирландайо</button></li>
+                                <li class="catalog-second__list-item"><button class="catalog-second__list-tab catalog-second__highlight" data-path="Доменико Гирландайо">Доменико Гирландайо</button></li>
                                 <li class="catalog-second__list-item"><button class="catalog-second__list-tab" data-path="Беноццо Гоццоли">Беноццо Гоццоли</button></li>
                                 <li class="catalog-second__list-item"><button class="catalog-second__list-tab" data-path="Граначчи, Франческо">Граначчи, Франческо</button></li>
                                 <li class="catalog-second__list-item"><button class="catalog-second__list-tab" data-path="Грегорио ди Чекко">Грегорио ди Чекко</button></li>
@@ -713,6 +729,12 @@
                                 <li class="catalog-second__list-item"><button class="catalog-second__list-tab" data-path="Пизанелло">Пизанелло</button></li>
                                 <li class="catalog-second__list-item"><button class="catalog-second__list-tab" data-path="Пинтуриккьо">Пинтуриккьо</button></li>
                             </ul>
+                            <div class="catalog-second__list" data-list="four">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consectetur at ratione culpa ipsum error laborum. Perspiciatis omnis iure dignissimos deserunt earum, at totam! Quam velit quis ea obcaecati aut?</p>
+                            </div>
+                            <div class="catalog-second__list" data-list="five">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consectetur at ratione culpa ipsum error laborum. Perspiciatis omnis iure dignissimos deserunt earum, at totam! Quam velit quis ea obcaecati aut?</p>
+                            </div>
                         </div>
                         <div class="catalog-second__item">
                             <button class="catalog-second__button">C 1500 по 1599 гг.</button>
@@ -1324,7 +1346,7 @@
         <section class="projects" id="nav-projects">
             <div class="projects__content container">
                 <h2 class="projects__heading">Проекты</h2>
-                <p class="projects__description">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="projects__description-tooltip"><span class="projects__description-tooltip-text projects__description-tooltip-text_one">Пример современных тенденций - современная методология разработки</span></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="projects__description-tooltip"><span class="projects__description-tooltip-text projects__description-tooltip-text_two">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span></span>  исключительно в разрезе маркетинговых и финансовых <span class="projects__description-tooltip"><span class="projects__description-tooltip-text projects__description-tooltip-text_three">В стремлении повысить качество</span></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: <a href="#" tabindex="0" class="projects__description-link">blanchard-art.ru/projects/about</a></p>
+                <p class="projects__description">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="projects__tooltip"><span class="projects__tooltip-text projects__tooltip-text_one">Пример современных тенденций - современная методология разработки</span></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="projects__tooltip"><span class="projects__tooltip-text projects__tooltip-text_two">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span></span>  исключительно в разрезе маркетинговых и финансовых <span class="projects__tooltip"><span class="projects__tooltip-text projects__tooltip-text_three">В стремлении повысить качество</span></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: <a href="#" tabindex="0" class="projects__description-link">blanchard-art.ru/projects/about</a></p>
                 <h3 class="projects__subtitle">Партнёры проектов:</h3>
                 <div class="projects__slider">
                     <div class="projects__navigation">
@@ -1414,7 +1436,6 @@
         <div class="footer__content container">
             <a href="#" aria-label="Логотип" class="footer__logo">
                 <img src="images/11-footer/logo.svg" alt="Blanchard">
-                <img src="images/11-footer/logo-caption.svg" alt="художественная галерея">
             </a>
             <div class="footer__links">
                 <a href="https://vk.com" rel="noopener" target="_blank" aria-label="В Контакте" class="footer__link footer__link_one"></a>

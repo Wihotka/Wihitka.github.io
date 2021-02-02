@@ -40,12 +40,8 @@
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
     transform: scale(1.1);
-    opacity: 0.5 !important;
-    outline: none !important;
-}
-
-.footer__logo img[alt="Blanchard"] {
-    margin-bottom: 7px;
+    opacity: 0.5;
+    outline: none;
 }
 
 .footer__links {
@@ -81,8 +77,8 @@
         -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
     transform: scale(1.2);
-    opacity: 0.5 !important;
-    outline: none !important;
+    opacity: 0.5;
+    outline: none;
 }
 
 .footer__link_one {
@@ -109,10 +105,6 @@
         height: auto;
     }
 
-    .footer__logo img[alt="Blanchard"] {
-        margin-bottom: -4px;
-    }
-
     .footer__link {
         width: 25px;
         height: 25px;
@@ -133,10 +125,26 @@
         outline: none;
     }
 
+    .footer__logo:active {
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        opacity: 0.5;
+        outline: none;
+    }
+
     .footer__link:hover {
             -webkit-transform: scale(1.2);
             -ms-transform: scale(1.2);
         transform: scale(1.2);
+        outline: none;
+    }
+
+    .footer__link:active {
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0.5;
         outline: none;
     }
 }
