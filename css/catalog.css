@@ -191,6 +191,8 @@
     font-weight: 600;
     font-size: 24px;
     background-color: initial;
+        -webkit-transition: color 300ms ease-in-out;
+        -o-transition: color 300ms ease-in-out;
     transition: color 300ms ease-in-out;
 }
 
@@ -290,6 +292,8 @@
 }
 
 .catalog-second__list_active {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
         -webkit-animation: blockAnimation 900ms alternate linear;
     animation: blockAnimation 900ms alternate linear;

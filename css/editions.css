@@ -154,6 +154,8 @@
 }
 
 .editions-first__price {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     padding: 0 19px;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -615,6 +617,8 @@
     }
 
     .editions-second_320 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 

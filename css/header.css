@@ -202,6 +202,8 @@
 }
 
 .header-menu__nav-link {
+        -webkit-transition: color 300ms ease-in-out;
+        -o-transition: color 300ms ease-in-out;
     transition: color 300ms ease-in-out;
 }
 
@@ -227,6 +229,8 @@
     align-items: center;
     margin-left: auto;
     font-weight: 400;
+        -webkit-transition: color 300ms ease-in-out;
+        -o-transition: color 300ms ease-in-out;
     transition: color 300ms ease-in-out;
 }
 
@@ -391,6 +395,8 @@
 
 .header-submenu__dropdown-list {
     position: relative;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     min-width: 260px;
     padding-right: 40px;
