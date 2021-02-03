@@ -20,17 +20,18 @@
 .ymaps-2-1-78-map-copyrights-promo,
 .ymaps-2-1-78-copyright__link,
 .ymaps-2-1-78-copyright__text {
-    display: none !important;
+    display: none;
 }
 
 .ymaps-2-1-77-zoom {
-    height: 2px !important;
+    height: 2px;
 }
 
 [class*="ground-pane"] {
         -webkit-filter: grayscale(1);
     filter: grayscale(1);
 }
+
 @media (max-width: 1550px) {
     .map {
         width: 50%;

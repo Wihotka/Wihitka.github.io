@@ -183,7 +183,7 @@
 }
 
 .ui-icon {
-    width: 0 !important;
+    width: 0;
 }
 
 .catalog-second__button {
@@ -275,7 +275,7 @@
 }
 
 .catalog-second__basic {
-    border-bottom: 1px solid #9d5cd0 !important;
+    border-bottom: 1px solid #9d5cd0;
 }
 
 .catalog-second__list {
@@ -402,7 +402,7 @@
 
     .catalog-second {
         width: 100%;
-        margin-bottom: 47px !important;
+        margin-bottom: 47px;
     }
 
     .catalog-second__list {
@@ -447,7 +447,7 @@
     }
 
     .catalog-second {
-        margin-bottom: 44px !important;
+        margin-bottom: 44px;
     }
 
     .catalog-second__item {

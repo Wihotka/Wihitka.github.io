@@ -41,44 +41,49 @@
 }
 
 .choices {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
 }
 
 .choices[data-type*=select-one]::after {
-    display: block !important;
-    width: 15px !important;
-    height: 15px !important;
-    right: 15px !important;
-    border-style: inherit !important;
+    display: block;
+    width: 15px;
+    height: 15px;
+    right: 15px;
+    border-style: inherit;
     background-image: url(../images/4-gallery/arrow.svg);
     background-repeat: no-repeat;
     background-position: top center;
 }
 
-.choices[data-type*=select-one],.is-open::after {
-    margin-top: -2.5px !important;
+.choices[data-type*=select-one].is-open::after {
+    margin-top: -2.5px;
 }
 
 .choices__placeholder {
-    opacity: 1 !important;
+    opacity: 1;
 }
 
 .choices__inner {
-    min-height: 42px !important;
-    padding: 0 15px !important;
-    border: 1px solid #999999 !important;
-    border-radius: 6px !important;
+    min-height: 42px;
+    padding: 0 15px;
+    border: 1px solid #999999;
+    border-radius: 6px;
     color: #ffffff;
-    background-color: inherit !important;
+    background-color: inherit;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+    padding-bottom: 0;
 }
 
 .is-open .choices__inner {
-    border: 1px solid #ffffff !important;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
 }
 
 .choices__list--dropdown {
-    border-radius: 6px !important;
-    background-color: inherit !important;
+    border-radius: 6px;
+    background-color: inherit;
         -webkit-transform: translateY(-40px) scaleY(0);
         -ms-transform: translateY(-40px) scaleY(0);
     transform: translateY(-40px) scaleY(0);
@@ -96,13 +101,13 @@
 }
 
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
-    background-color: inherit !important;
+    background-color: inherit;
 }
 
 .choices__list--dropdown .choices__item {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-    border-top: 1px solid #999999 !important;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-top: 1px solid #999999;
 }
 
 .is-selected {
@@ -137,15 +142,15 @@
 }
 
 .gallery-second {
-    position: relative !important;
+    position: relative;
     width: 1150px;
     max-height: 844px;
-    padding-top: 85px !important;
-    padding-bottom: 8px !important;
+    padding-top: 85px;
+    padding-bottom: 8px;
 }
 
 .gallery-second__slide {
-    height: auto !important;
+    height: auto;
 }
 
 .gallery-second__picture {
@@ -153,6 +158,18 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+
+.gallery-second__picture::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+        -webkit-transition: background-color 300ms ease-in-out;
+        -o-transition: background-color 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
 }
 
 .gallery-second__image {
@@ -177,22 +194,18 @@
     opacity: 0;
 }
 
-.gallery-second__picture:active::before {
-    opacity: 1 !important;
-}
-
 .gallery-pagination {
     top: 25px;
     margin-left: 51px;
-    text-align: left !important;
+    text-align: left;
     line-height: 30px;
 }
 
 .gallery-swiper-button-prev,
 .gallery-swiper-button-next {
-    top: 25px !important;
-    width: 30px !important;
-    height: 30px !important;
+    top: 25px;
+    width: 30px;
+    height: 30px;
     border: 2px solid #666666;
     border-radius: 100px;
     background-image: url(../images/4-gallery/nav-background.svg);
@@ -216,24 +229,24 @@
 
 .gallery-swiper-button-prev::after,
 .gallery-swiper-button-next::after {
-    font-size: 11px !important;
+    font-size: 11px;
 }
 
 .gallery-swiper-button-prev {
-    left: 3px !important;
+    left: 3px;
 }
 
 .gallery-swiper-button-next {
-    left: 103px !important;
+    left: 103px;
 }
 
 :root {
-    --swiper-navigation-size: none !important;
-    --swiper-theme-color: none !important;
+    --swiper-navigation-size: none;
+    --swiper-theme-color: none;
 }
 
 .mfp-bg {
-    opacity: 0 !important;
+    opacity: 0;
 }
 
 @-webkit-keyframes modalAnimation {
@@ -257,18 +270,18 @@
 }
 
 .mfp-zoom-out-cur .mfp-bg {
-    opacity: 0.8 !important;
+    opacity: 0.8;
         -webkit-animation: modalAnimation 300ms linear alternate;
     animation: modalAnimation 300ms linear alternate;
 }
 
 .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 .mfp-wrap {
-    position: fixed !important;
-    top: 0 !important;
+    position: fixed;
+    top: 0;
 }
 
 .mfp-image-holder .mfp-content {
@@ -314,11 +327,11 @@
 }
 
 img.mfp-img {
-    width: 100% !important;
+    width: 100%;
 }
 
 .mfp-bottom-bar {
-    top: 99% !important;
+    top: 99%;
     padding: 18px 0;
     border-top: 2px solid #7943a4;
     border-bottom-right-radius: 10px;
@@ -329,7 +342,7 @@ img.mfp-img {
 .mfp-title {
     padding-left: 36px;
     font-weight: 700;
-    color: #333333 !important;
+    color: #333333;
 }
 
 @media (max-width: 1300px) {
@@ -348,7 +361,7 @@ img.mfp-img {
     }
 
     .gallery-second__slide {
-        height: auto !important;
+        height: auto;
     }
 }
 
@@ -386,7 +399,7 @@ img.mfp-img {
     }
 
     .gallery-second__slide {
-        height: 280px !important;
+        height: 280px;
     }
 
     .gallery-second__image {
@@ -415,12 +428,12 @@ img.mfp-img {
     }
 
     .gallery-second {
-        padding-top: 35px !important;
-        padding-bottom: 60px !important;
+        padding-top: 35px;
+        padding-bottom: 60px;
     }
 
     .gallery-second__slide {
-        height: 367px !important;
+        height: 367px;
     }
 
     .gallery-second__picture {
@@ -440,22 +453,22 @@ img.mfp-img {
         top: auto;
         bottom: 0;
         margin-left: 0;
-        text-align: center !important;
+        text-align: center;
     }
     
     .gallery-swiper-button-prev,
     .gallery-swiper-button-next {
-        top: auto !important;
-        bottom: 10px !important;
+        top: auto;
+        bottom: 10px;
     }
 
     .gallery-swiper-button-prev {
-        left: 27.5% !important;
+        left: 27.5%;
     }
     
     .gallery-swiper-button-next {
-        right: 27.5% !important;
-        left: auto !important;
+        right: 27.5%;
+        left: auto;
     }
 
     .gallery-first__offer_768 {
@@ -477,6 +490,10 @@ img.mfp-img {
 
     .gallery-second__picture:hover .gallery-second__loop {
         opacity: 1;
+    }
+
+    .gallery-second__picture:active::before {
+        background-color: rgba(194, 131, 243, 0.4);
     }
 
     .gallery-swiper-button-prev:hover,

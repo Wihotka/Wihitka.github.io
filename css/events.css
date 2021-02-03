@@ -359,26 +359,26 @@
     }
 
     .events__swiper {
-        position: relative !important;
+        position: relative;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        padding-bottom: 51px !important;
+        padding-bottom: 51px;
     }
 
     .events__pagination {
         margin-left: 82px;
-        text-align: left !important;
+        text-align: left;
     }
 
     .swiper-pagination-bullet {
-        width: 10px !important;
-        height: 10px !important;
-        margin: 0 7.5px !important;
+        width: 10px;
+        height: 10px;
+        margin: 0 7.5px;
     }
     
     .swiper-pagination-bullet-active {
-        background: #666666 !important;
+        background: #666666;
     }
 
     .events__blocks {
