@@ -34,6 +34,7 @@
         -webkit-box-pack: center;
         -ms-flex-pack: center;
     justify-content: center;
+    width: 100%;
 }
 
 @-webkit-keyframes extraBlocks {
@@ -119,6 +120,10 @@
     line-height: 16px;
     text-align: right;
     color: #999999;
+}
+
+.events__block-date_second {
+    display: block;
 }
 
 .events__block-content {
