@@ -2,7 +2,7 @@
     padding-top: 80px;
     padding-bottom: 70px;
     color: #ffffff;
-    background-image: url(../images/4-gallery/background.jpg);
+    background-image: url(../images/4-gallery/webp/background.webp), url(../images/4-gallery/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

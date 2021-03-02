@@ -5,7 +5,7 @@
     font-weight: 700;
     font-size: 18px;
     color: #ffffff;
-    background-image: url(../images/2-hero/background.jpg);
+    background-image: url(../images/2-hero/webp/background.webp), url(../images/2-hero/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -108,15 +108,15 @@
 }
 
 .swiper-slide1 {
-    background-image: url(../images/2-hero/background.jpg);
+    background-image: url(../images/2-hero/webp/background.webp), url(../images/2-hero/background.jpg);
 }
 
 .swiper-slide2 {
-    background-image: url(../images/2-hero/background-1.jpg);
+    background-image: url(../images/2-hero/background-1.jpg), url(../images/2-hero/background-1.jpg);
 }
 
 .swiper-slide3 {
-    background-image: url(../images/2-hero/background-2.jpg);
+    background-image: url(../images/2-hero/background-2.jpg), url(../images/2-hero/background-2.jpg);
 }
 
 @media (max-width: 1024px) {

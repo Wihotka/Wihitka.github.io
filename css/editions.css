@@ -2,7 +2,7 @@
     padding-top: 80px;
     padding-bottom: 78px;
     color: #ffffff;
-    background-image: url(../images/7-editions/background.jpg);
+    background-image: url(../images/7-editions/webp/background.webp), url(../images/7-editions/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
