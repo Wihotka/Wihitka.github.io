@@ -44,6 +44,8 @@
         -webkit-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
         -o-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
     transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
+    text-decoration: none;
+    outline: none;
 }
 
 .hero-link:focus {

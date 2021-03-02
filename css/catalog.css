@@ -25,6 +25,8 @@
     border: none;
     background-color: inherit;
     margin-right: 46px;
+    cursor: pointer;
+    outline: none;
 }
 
 .catalog__flag-button-last {
@@ -40,6 +42,10 @@
         -o-transition: border-width 100ms ease-in-out, filter 100ms ease-in-out;
     transition: border-width 100ms ease-in-out, filter 100ms ease-in-out;
     transition: border-width 100ms ease-in-out, filter 100ms ease-in-out, -webkit-filter 100ms ease-in-out;
+}
+
+.catalog__flag-button:focus .catalog__flag-image {
+    border: 2px solid #9d5cd0;
 }
 
 .catalog__flag-button:active .catalog__flag-image {
@@ -172,12 +178,6 @@
     border-bottom: 1px solid #cacaca;
 }
 
-.catalog-second__item_closed {
-    position: absolute;
-    top: 32px;
-    right: 0;
-}
-
 .catalog-second__item:nth-child(1) {
     border-top: 1px solid #cacaca;
 }
@@ -194,6 +194,7 @@
         -webkit-transition: color 300ms ease-in-out;
         -o-transition: color 300ms ease-in-out;
     transition: color 300ms ease-in-out;
+    cursor: pointer;
 }
 
 .catalog-second__button::before {
@@ -216,54 +217,47 @@
 }
 
 .catalog-second__item_closed {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    width: 50px;
+    height: 50px;
     border: 2px solid #ececec;
     border-radius: 100px;
     background-color: #ececec;
+        -webkit-transition: background-color 300ms ease-in-out, border 300ms ease-in-out;
+        -o-transition: background-color 300ms ease-in-out, border 300ms ease-in-out;
+    transition: background-color 300ms ease-in-out, border 300ms ease-in-out
 }
 
-.catalog-second__button + svg {
-        -webkit-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
-        -o-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
-    transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
+.catalog-second__item_closed::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-bottom: 1px solid #000000;
+    border-right: 1px solid #000000;
+        -webkit-transform: rotateZ(45deg);
+        -ms-transform: rotate(45deg);
+    transform: rotateZ(45deg);
+    opacity: 0.75;
+        -webkit-transition: border 300ms ease-in-out, opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+    transition: border 300ms ease-in-out, opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+        -o-transition: transform 300ms ease-in-out, border 300ms ease-in-out, opacity 300ms ease-in-out;
+    transition: transform 300ms ease-in-out, border 300ms ease-in-out, opacity 300ms ease-in-out;
+    transition: transform 300ms ease-in-out, border 300ms ease-in-out, opacity 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
 }
 
-.catalog-second__button:focus + svg {
+.catalog-second__button:focus + .catalog-second__item_closed {
     border: 2px solid #9d5cd0;
 }
 
-.catalog-second__button + svg path {
-        -webkit-transform-origin: center;
-        -ms-transform-origin: center;
-    transform-origin: center;
-        -webkit-transition: fill 300ms ease-in-out, stroke 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-    transition: fill 300ms ease-in-out, stroke 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-        -o-transition: fill 300ms ease-in-out, stroke 300ms ease-in-out, transform 300ms ease-in-out;
-    transition: fill 300ms ease-in-out, stroke 300ms ease-in-out, transform 300ms ease-in-out;
-    transition: fill 300ms ease-in-out, stroke 300ms ease-in-out, transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
-}
-
-.catalog-second__button:active + svg .catalog-second__item-background {
-    fill: #7943a4;
-}
-
-.catalog-second__button:active + svg .catalog-second__item-border {
-    stroke: #7943a4;
-}
-
-.catalog-second__button:active + svg .catalog-second__item-arrow {
-    stroke: #ffffff;
-        -webkit-transform: rotateX(180deg) translateY(-1px);
-    transform: rotateX(180deg) translateY(-1px);
-}
-
-.catalog-second__button:active + svg {
-    border: 2px solid #d1a9f0;
-    background-color: #7943a4;
-}
-
-.ui-state-active .catalog-second__button + svg .catalog-second__item-arrow {
-        -webkit-transform: rotateX(180deg) translateY(-1px);
-    transform: rotateX(180deg) translateY(-1px);
+.ui-state-active .catalog-second__button + .catalog-second__item_closed::after {
+        -webkit-transform: translateY(3px) rotateX(180deg) rotateZ(45deg);
+    transform: translateY(3px) rotateX(180deg) rotateZ(45deg);
 }
 
 .ui-state-active {
@@ -289,6 +283,7 @@
         -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     max-height: 288px;
+    list-style: none;
 }
 
 .catalog-second__list_active {
@@ -309,6 +304,7 @@
         -webkit-transition: color 300ms ease-in-out;
         -o-transition: color 300ms ease-in-out;
     transition: color 300ms ease-in-out;
+    cursor: pointer;
 }
 
 .catalog-second__list-tab:focus {
@@ -447,7 +443,7 @@
     }
 
     .catalog-second {
-        margin-bottom: 44px;
+        margin-bottom: 42px;
     }
 
     .catalog-second__item {
@@ -514,40 +510,25 @@
         outline: none;
     }
 
-    .catalog-second__button:hover + svg {
+    .catalog-second__button:hover + .catalog-second__item_closed {
         border: 2px solid #9d5cd0;
         background-color: #9d5cd0;
     }
-
-    .catalog-second__button:hover + svg .catalog-second__item-background {
-        fill: #9d5cd0;
-    }
     
-    .catalog-second__button:hover + svg .catalog-second__item-border {
-        stroke: #9d5cd0;
-    }
-    
-    .catalog-second__button:hover + svg .catalog-second__item-arrow {
-        stroke: #ffffff;
+    .catalog-second__button:hover + .catalog-second__item_closed::after {
+        border-color: #ffffff;
+        opacity: 1;
     }
 
-    .catalog-second__button:active + svg .catalog-second__item-background {
-        fill: #7943a4;
-    }
-    
-    .catalog-second__button:active + svg .catalog-second__item-border {
-        stroke: #7943a4;
-    }
-    
-    .catalog-second__button:active + svg .catalog-second__item-arrow {
-        stroke: #ffffff;
-            -webkit-transform: rotateX(180deg) translateY(-1px);
-        transform: rotateX(180deg) translateY(-1px);
-    }
-    
-    .catalog-second__button:active + svg {
+    .catalog-second__button:active + .catalog-second__item_closed {
         border: 2px solid #d1a9f0;
         background-color: #7943a4;
+    }
+    
+    .catalog-second__button:active + .catalog-second__item_closed::after {
+        border-color: #ffffff;
+            -webkit-transform: translateY(3px) rotateX(180deg) rotateZ(45deg);
+        transform: translateY(3px) rotateX(180deg) rotateZ(45deg);
     }
 
     .catalog-second__list-tab:hover {

@@ -55,10 +55,23 @@
     border: 1px solid #333333;
     border-radius: 100px;
     background-color: inherit;
+    outline: none;
 }
 
 .contacts-first__form-input:nth-child(2) {
     margin-bottom: 18px;
+}
+
+.contacts-first__form-input:focus::-webkit-input-placeholder {
+    color: transparent
+}
+  
+.contacts-first__form-input:focus::-moz-placeholder {
+    color: transparent
+}
+  
+.contacts-first__form-input:focus:-ms-input-placeholder {
+    color: transparent
 }
 
 .contacts-first__form-button {
@@ -76,19 +89,17 @@
         -webkit-transition: color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
         -o-transition: color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
     transition: color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
+    cursor: pointer;
+    outline: none;
 }
 
-.contacts-first__form-button:focus span {
+.contacts-first__form-button:focus .contacts-first__button-text {
     outline: 2px solid #7943a4;
 }
 
 .contacts-first__form-button:active {
     border: 2px solid #d1a9f0;
     background-color: #7943a4;
-}
-
-.contacts-first__form-button:active span {
-    outline: none;
 }
 
 .contacts-first__subtitle_links {
@@ -109,11 +120,6 @@
 
 .contacts-first__link:focus {
     outline: 2px solid #9d5cd0;
-}
-
-.contacts-first__link:active {
-    opacity: 0.6;
-    outline: none;
 }
 
 .contacts-first__link_one {
@@ -200,7 +206,7 @@
         background-color: #9d5cd0;
     }
 
-    .contacts-first__form-button:hover span {
+    .contacts-first__form-button:hover .contacts-first__button-text {
         outline: none;
     }
 
@@ -209,7 +215,7 @@
         background-color: #7943a4;
     }
     
-    .contacts-first__form-button:active span {
+    .contacts-first__form-button:active .contacts-first__button-text {
         outline: none;
     }
 
