@@ -6,7 +6,7 @@
     margin-bottom: 15px;
     font-weight: 400;
     font-size: 48px;
-    line-height: 65.37px;
+    line-height: 65px;
 }
 
 .events__swiper {
@@ -129,7 +129,7 @@
     color: #999999;
 }
 
-.events__block-date_second {
+.events__block-date-second {
     display: block;
 }
 
@@ -202,6 +202,21 @@
 
 .events__button:focus .events__button-text {
     outline: 2px solid #7943a4;
+}
+
+.events__button:active {
+    border: 2px solid #d1a9f0;
+    color: #ffffff;
+    background-color: #7943a4;
+}
+
+.events__button:active .events__button-text {
+    outline: none;
+}
+
+.events__block-link:active {
+    color: #7943a4;
+    outline: none;
 }
 
 .events__button:active {

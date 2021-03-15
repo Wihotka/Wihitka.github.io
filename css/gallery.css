@@ -8,9 +8,14 @@
 }
 
 .gallery__content {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-height: 844px;
 }
 
 .gallery-first {
@@ -21,14 +26,17 @@
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
     flex-direction: column;
+    order: 0;
+    width: 25%;
     margin-right: 50px;
+    margin-bottom: 200px;
 }
 
 .gallery-first__heading {
     margin-bottom: 18px;
     font-weight: 400;
     font-size: 48px;
-    line-height: 65.37px;
+    line-height: 65px;
 }
 
 .gallery-first__caption {
@@ -36,11 +44,8 @@
     font-weight: 600;
 }
 
-.gallery-first__select {
-    max-width: 400px;
-}
-
 .choices {
+    width: 100%;
     margin-bottom: 0;
 }
 
@@ -114,13 +119,17 @@
     display: none;
 }
 
-.offer {
-    max-width: 400px;
-    margin-top: auto;
+.gallery__offer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    order: 1;
+    width: calc(25% - 50px);
     font-weight: 600;
 }
 
-.link {
+.gallery__link {
     color: #9d5cd0;
         -webkit-transition: color 300ms ease-in-out;
         -o-transition: color 300ms ease-in-out;
@@ -128,11 +137,11 @@
     text-decoration: none;
 }
 
-.link:focus {
+.gallery__link:focus {
     outline: 2px solid #7943a4;
 }
 
-.link:active {
+.gallery__link:active {
     border-bottom: none;
     color: #7943a4;
     outline: none;
@@ -140,7 +149,8 @@
 
 .gallery-second {
     position: relative;
-    width: 1150px;
+    order: 2;
+    width: calc(75% - 50px);
     max-height: 844px;
     padding-top: 85px;
     padding-bottom: 8px;
@@ -366,8 +376,20 @@
     line-height: 32px;
 }
 
-.gallery__offer {
-    display: none;
+.gallery__link:active {
+    border-bottom: none;
+    color: #7943a4;
+    outline: none;
+}
+
+.gallery-second__picture:active::before {
+    background-color: rgba(194, 131, 243, 0.4);
+}
+
+.gallery-swiper-button-prev:active,
+.gallery-swiper-button-next:active {
+    border: 2px solid #d1a9f0;
+    background-image: url(../images/4-gallery/nav-background-active.svg);
 }
 
 @media (min-width: 700px) {
@@ -378,23 +400,22 @@
     }
 }
 
-@media (max-width: 1300px) {
-    .gallery-second {
-        max-height: 650px;
-    }
-}
-
 @media (max-width: 1024px) {
     .gallery-first {
-        width: 540px;
+        width: 30%;
+        margin-bottom: 200px;
     }
 
     .gallery-second {
-        max-height: 689px;
+        width: calc(70% - 50px);
     }
 
     .gallery-second__slide {
         height: auto;
+    }
+
+    .gallery__offer {
+        width: calc(30% - 25px);
     }
 
     .modal__content {
@@ -431,10 +452,8 @@
 
 @media (max-width: 768px) {
     .gallery__content {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-        flex-direction: column;
+        flex-wrap: nowrap;
+        max-height: fit-content;
     }
 
     .gallery-first {
@@ -443,17 +462,15 @@
         margin-bottom: 82px;
     }
 
-    .gallery-first__offer {
-        display: none;
+    .choices {
+        max-width: 280px;
     }
 
     .gallery-second {
+        order: 1;
         width: 100%;
         max-height: 679px;
-    }
-
-    .choices {
-        max-width: 280px;
+        margin-bottom: 30px;
     }
 
     .gallery-second__slide {
@@ -465,9 +482,9 @@
     }
 
     .gallery__offer {
-        display: block;
-        max-width: 100%;
-        margin-top: 30px;
+        position: static;
+        order: 2;
+        width: 100%;
     }
 }
 
@@ -480,7 +497,7 @@
     .gallery-first__heading {
         margin-bottom: 13px;
         font-size: 28px;
-        line-height: 38.13px;
+        line-height: 38px;
     }
 
     .gallery-first__caption {
@@ -494,6 +511,7 @@
     .gallery-second {
         padding-top: 35px;
         padding-bottom: 60px;
+        margin-bottom: 10px;
     }
 
     .gallery-second__slide {
@@ -535,10 +553,6 @@
         left: auto;
     }
 
-    .gallery__offer {
-        margin-top: 10px;
-    }
-
     .modal__content {
         max-width: -webkit-fit-content;
         max-width: -moz-fit-content;
@@ -570,12 +584,12 @@
 }
 
 @media (hover: hover) {
-    .link:hover {
+    .gallery__link:hover {
         border-bottom: 1px solid #9d5cd0;
         outline: none;
     }
 
-    .link:active {
+    .gallery__link:active {
         border-bottom: none;
         color: #7943a4;
         outline: none;

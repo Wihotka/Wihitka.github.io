@@ -54,23 +54,6 @@
         <div class="header-menu">
             <div class="header-menu__content container">
                 <h1 class="visually-hidden">Blanchard - Художественная галлерея</h1>
-                <div class="header-menu__mobile" id="mobile">
-                    <ul class="header-menu__mobile-list">
-                        <li class="header-menu__mobile-item"><a href="#nav-about" class="header-menu__mobile-link">О нас</a></li>
-                        <li class="header-menu__mobile-item"><a href="#nav-gallery" class="header-menu__mobile-link">Галерея</a></li>
-                        <li class="header-menu__mobile-item"><a href="#nav-catalog" class="header-menu__mobile-link">Каталог</a></li>
-                        <li class="header-menu__mobile-item"><a href="#nav-events" class="header-menu__mobile-link">События</a></li>
-                        <li class="header-menu__mobile-item"><a href="#nav-editions" class="header-menu__mobile-link">Издания</a></li>
-                        <li class="header-menu__mobile-item"><a href="#nav-projects" class="header-menu__mobile-link">Проекты</a></li>
-                        <li class="header-menu__mobile-item"><a href="#nav-contacts" class="header-menu__mobile-link">Контакты</a></li>
-                        <li class="header-menu__mobile-item"><a href="#" class="header-menu__mobile-link header-menu__mobile-link_enter">
-                            <span>Войти</span>
-                            <svg width="13" height="13" class="header-menu__enter-icon">
-                                <use xlink:href="images/sprite.svg#enter-icon"></use>
-                            </svg>
-                        </a></li>
-                    </ul>
-                </div>
                 <button aria-label="Меню" class="header-menu__burger">
                     <svg width="36" height="3" class="header-menu__burger-icon header-menu__burger-icon_first">
                         <use xlink:href="images/sprite.svg#burger-icon"></use>
@@ -86,6 +69,11 @@
                     <img src="images/1-header/logo.svg" alt="Blanchard">
                 </a>
                 <nav class="header-menu__nav-menu" id="menu">
+                    <button class="header-menu__close">
+                        <svg width="29" height="29" class="header-menu__close-image">
+                            <use xlink:href="images/sprite.svg#x-icon"></use>
+                        </svg>
+                    </button>
                     <ul class="header-menu__nav">
                         <li class="header-menu__nav-item">
                             <a href="#nav-about" class="header-menu__nav-link">О нас</a>
@@ -109,18 +97,26 @@
                             <a href="#nav-contacts" class="header-menu__nav-link">Контакты</a>
                         </li>
                     </ul>
+                    <a href="#" class="header-menu__enter">
+                        <span class="header-menu__enter-text">Войти</span>
+                        <svg width="13" height="13" class="header-menu__enter-icon">
+                            <use xlink:href="images/sprite.svg#enter-icon"></use>
+                        </svg>
+                    </a>
                 </nav>
-                <a href="#" class="header-menu__enter">
-                    <span>Войти</span>
-                    <svg width="13" height="13" class="header-menu__enter-icon">
-                        <use xlink:href="images/sprite.svg#enter-icon"></use>
-                    </svg>
-                </a>
-                <button aria-label="Поиск" class="header-menu__search">
-                    <svg width="24" height="22" class="header-menu__search-icon">
-                        <use xlink:href="images/sprite.svg#search-icon"></use>
-                    </svg>
-                </button>
+                <div class="header-menu__search-content">
+                    <button aria-label="Поиск" class="header-menu__search">
+                        <svg width="24" height="24" class="header-menu__search-icon">
+                            <use xlink:href="images/sprite.svg#search-icon"></use>
+                        </svg>
+                    </button>
+                    <input type="text" class="header-menu__search-input">
+                    <button class="header-menu__search-close">
+                        <svg width="29" height="29" class="header-menu__search-close-image">
+                            <use xlink:href="images/sprite.svg#x-icon"></use>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
         <div class="header-submenu">
@@ -220,15 +216,7 @@
                     <p class="hero-description">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
                     <a href="#nav-contacts" class="hero-link">Подписаться на рассылку</a>
                 </div>
-                <div class="swiper-container hero-swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide swiper-slide1"></div>
-                        <div class="swiper-slide swiper-slide2"></div>
-                        <div class="swiper-slide swiper-slide3"></div>
-                    </div>
-                </div>
+                <div class="hero-background hero-background_first"></div>
             </div>
         </section>
         <section class="about" id="nav-about">
@@ -247,7 +235,6 @@
                         <option value="">Направление</option>
                         <option value="">Техника</option>
                     </select>
-                    <p class="gallery-first__offer offer">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="#" class="gallery-first__link link">авторизуйтесь</a>, либо воспользуйтесь лицензией.</p>
                 </div>
                 <div class="gallery-second swiper-container gallery-swiper">
                     <!-- Additional required wrapper -->
@@ -256,8 +243,8 @@
                         <div class="swiper-slide gallery-second__slide">
                             <div class="gallery-second__picture" data-path="img-one">
                                 <picture>
-                                    <source srcset="images/4-gallery/webp/1.webp" type="image/webp">
-                                    <img src="images/4-gallery/1.jpg" alt="Казимир Малевич: Торс" class="gallery-second__image" />
+                                    <source srcset="images/4-gallery/webp/1.webp" type="image/webp" class="swiper-lazy">
+                                    <img src="images/4-gallery/1.jpg" alt="Казимир Малевич: Торс" class="gallery-second__image swiper-lazy" />
                                 </picture>
                                 <div class="gallery-second__loop"></div>
                             </div>
@@ -530,7 +517,9 @@
                     <div class="swiper-button-prev gallery-swiper-button-prev"></div>
                     <div class="swiper-button-next gallery-swiper-button-next"></div>
                 </div>
-                <p class="gallery__offer offer">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="#" class="gallery__link link">авторизуйтесь</a>, либо воспользуйтесь лицензией.</p>
+                <div class="gallery__offer">
+                    <p>Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="#" class="gallery__link">авторизуйтесь</a>, либо воспользуйтесь лицензией.</p>
+                </div>
             </div>
         </section>
         <section class="catalog" id="nav-catalog">
@@ -673,7 +662,7 @@
                             <p class="catalog-first__description"><span class="catalog-first__description-years">1435 — 10 октября 1488.</span>
                                 Андреа дель Верроккьо родился и работал во Флоренции. Специализировался на скульптуре, но также обращался и к живописи. В эпоху Раннего Возрождения художники работали почти исключительно по заказам, поэтому в то время была велика роль меценатов. Эта практика особенно распространилась во Флоренции XV века, где художественные мастерские осуществляли любые заказы покровителей — от росписи посуды до архитектурных проектов. Верроккьо считался непревзойденным декоратором и режиссёром придворных празднеств.</p>
                         </div>
-                        <div class="catalog-first__block catalog-first__tab_active" data-name="Доменико Гирландайо">
+                        <div class="catalog-first__block catalog-first__block_active" data-name="Доменико Гирландайо">
                             <picture>
                                 <source srcset="images/5-catalog/italy/webp/domenico_ghirlandaio.webp" type="image/webp">
                                 <img src="images/5-catalog/italy/domenico_ghirlandaio.jpg" alt="Доменико Гирландайо" class="catalog-first__photo" />
@@ -822,7 +811,7 @@
                     <div class="catalog-second" id="accordion">
                         <div class="catalog-second__item">
                             <button class="catalog-second__button">C 1400 по 1499 гг.</button>
-                            <div class="catalog-second__item_closed"></div>
+                            <div class="catalog-second__item-closed"></div>
                         </div>
                         <div class="catalog-second__basic">
                             <div class="catalog-second__list" data-list="one">
@@ -871,42 +860,42 @@
                         </div>
                         <div class="catalog-second__item">
                             <button class="catalog-second__button">C 1500 по 1599 гг.</button>
-                            <div class="catalog-second__item_closed"></div>
+                            <div class="catalog-second__item-closed"></div>
                         </div>
                         <div class="catalog-second__basic">
                             <p class="catalog-second__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel et veritatis praesentium deleniti quos ullam itaque totam cupiditate eius, consequatur delectus dolores eos accusamus, incidunt amet repellat facere neque?</p>
                         </div>
                         <div class="catalog-second__item">
                             <button class="catalog-second__button">C 1600 по 1699 гг.</button>
-                            <div class="catalog-second__item_closed"></div>
+                            <div class="catalog-second__item-closed"></div>
                         </div>
                         <div class="catalog-second__basic">
                             <p class="catalog-second__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel et veritatis praesentium deleniti quos ullam itaque totam cupiditate eius, consequatur delectus dolores eos accusamus, incidunt amet repellat facere neque?</p>
                         </div>
                         <div class="catalog-second__item">
                             <button class="catalog-second__button">C 1700 по 1799 гг.</button>
-                            <div class="catalog-second__item_closed"></div>
+                            <div class="catalog-second__item-closed"></div>
                         </div>
                         <div class="catalog-second__basic">
                             <p class="catalog-second__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel et veritatis praesentium deleniti quos ullam itaque totam cupiditate eius, consequatur delectus dolores eos accusamus, incidunt amet repellat facere neque?</p>
                         </div>
                         <div class="catalog-second__item">
                             <button class="catalog-second__button">C 1800 по 1899 гг.</button>
-                            <div class="catalog-second__item_closed"></div>
+                            <div class="catalog-second__item-closed"></div>
                         </div>
                         <div class="catalog-second__basic">
                             <p class="catalog-second__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel et veritatis praesentium deleniti quos ullam itaque totam cupiditate eius, consequatur delectus dolores eos accusamus, incidunt amet repellat facere neque?</p>
                         </div>
                         <div class="catalog-second__item">
                             <button class="catalog-second__button">C 1900 по 1999 гг.</button>
-                            <div class="catalog-second__item_closed"></div>
+                            <div class="catalog-second__item-closed"></div>
                         </div>
                         <div class="catalog-second__basic">
                             <p class="catalog-second__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel et veritatis praesentium deleniti quos ullam itaque totam cupiditate eius, consequatur delectus dolores eos accusamus, incidunt amet repellat facere neque?</p>
                         </div>
                         <div class="catalog-second__item">
                             <button class="catalog-second__button">C 2000 г.</button>
-                            <div class="catalog-second__item_closed"></div>
+                            <div class="catalog-second__item-closed"></div>
                         </div>
                         <div class="catalog-second__basic">
                             <p class="catalog-second__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor vel et veritatis praesentium deleniti quos ullam itaque totam cupiditate eius, consequatur delectus dolores eos accusamus, incidunt amet repellat facere neque?</p>
@@ -918,7 +907,7 @@
         <section class="events" id="nav-events">
             <div class="events__content container">
                 <h2 class="events__heading">События</h2>
-                <div class="swiper-container events__swiper">
+                <div class="swiper-container events__swiper" data-mobile="false">
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper events__wrapper">
                         <!-- Slides -->
@@ -928,7 +917,7 @@
                                     <source srcset="images/6-events/webp/event-1.webp" type="image/webp" />
                                     <img src="images/6-events/event-1.jpg" alt="Первое событие" class="events__block-image" />
                                 </picture>
-                                <span class="events__block-date">Музей им. Щусева<span class="events__block-date_second">с 20 марта по 30 апреля</span></span>
+                                <span class="events__block-date">Музей им. Щусева<span class="events__block-date-second">с 20 марта по 30 апреля</span></span>
                                 <div class="events__block-content">
                                     <h3 class="events__block-heading">Книжная гравюра в живом восприятии</h3>
                                     <p class="events__block-description events__block-description_full">Один из ведущих   флорентийских художников Кватроченто, основатель художественной династии, которую     продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный     Микеланджело.</p>
@@ -943,7 +932,7 @@
                                     <source srcset="images/6-events/webp/event-2.webp" type="image/webp" />
                                     <img src="images/6-events/event-2.jpg" alt="Второе событие" class="events__block-image" />
                                 </picture>
-                                <span class="events__block-date">ММОМА<span class="events__block-date_second">24 марта 19:00</span></span>
+                                <span class="events__block-date">ММОМА<span class="events__block-date-second">24 марта 19:00</span></span>
                                 <div class="events__block-content">
                                     <h3 class="events__block-heading">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
                                     <p class="events__block-description events__block-description_full">Высокий уровень   вовлечения представителей целевой аудитории является четким доказательством простого  факта: постоянный количественный рост и сфера нашей активности представляет собой    интересный эксперимент проверки новых принципов формирования...</p>
@@ -958,7 +947,7 @@
                                     <source srcset="images/6-events/webp/event-3.webp" type="image/webp" />
                                     <img src="images/6-events/event-3.jpg" alt="Третье событие" class="events__block-image">
                                 </picture>
-                                <span class="events__block-date">Еврейский музей<span class="events__block-date_second">с 31 марта по 21 апреля</span></span>
+                                <span class="events__block-date">Еврейский музей<span class="events__block-date-second">с 31 марта по 21 апреля</span></span>
                                 <div class="events__block-content">
                                     <h3 class="events__block-heading">Выставка «Формация 2020»</h3>
                                     <p class="events__block-description events__block-description_full">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений. Также как перспективное планирование играет определяющее значение для новых принципов формирования материально-технической и кадровой базы.</p>
@@ -973,7 +962,7 @@
                                     <source srcset="images/6-events/webp/event-4.webp" type="image/webp" />
                                     <img src="images/6-events/event-4.jpg" alt="Четвертое событие" class="events__block-image">
                                 </picture>
-                                <span class="events__block-date">Третьяковка на Крымском валу<span class="events__block-date_second">с 30 марта по 30 апреля</span></span>
+                                <span class="events__block-date">Третьяковка на Крымском валу<span class="events__block-date-second">с 30 марта по 30 апреля</span></span>
                                 <div class="events__block-content">
                                     <h3 class="events__block-heading">XXIV Международная биеннале молодого искусства</h3>
                                     <p class="events__block-description events__block-description_full">Внезапно, реплицированные с зарубежных источников, современные исследования представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть рассмотрены исключительно в разрезе маркетинговых и финансовых...</p>
@@ -988,7 +977,7 @@
                                     <source srcset="images/6-events/webp/event-5.webp" type="image/webp" />
                                     <img src="images/6-events/event-5.jpg" alt="Третье событие" class="events__block-image">
                                 </picture>
-                                <span class="events__block-date">ММАМ<span class="events__block-date_second">с 8 апреля по 20 мая</span></span>
+                                <span class="events__block-date">ММАМ<span class="events__block-date-second">с 8 апреля по 20 мая</span></span>
                                 <div class="events__block-content">
                                     <h3 class="events__block-heading">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
                                     <p class="events__block-description events__block-description_full">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело.</p>
@@ -1019,7 +1008,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Бестселлеры</span>
+                                <span class="checkbox-content">Бестселлеры</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1030,7 +1019,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Искусство</span>
+                                <span class="checkbox-content">Искусство</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1041,7 +1030,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Архитектура</span>
+                                <span class="checkbox-content">Архитектура</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1052,7 +1041,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Дизайн</span>
+                                <span class="checkbox-content">Дизайн</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1063,7 +1052,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Мода</span>
+                                <span class="checkbox-content">Мода</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1074,7 +1063,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Детям</span>
+                                <span class="checkbox-content">Детям</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1085,7 +1074,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Художественная литература</span>
+                                <span class="checkbox-content">Художественная литература</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1096,7 +1085,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Публицистика</span>
+                                <span class="checkbox-content">Публицистика</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1107,7 +1096,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Путеводители</span>
+                                <span class="checkbox-content">Путеводители</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1118,7 +1107,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Философия</span>
+                                <span class="checkbox-content">Философия</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1129,7 +1118,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Учебная литература</span>
+                                <span class="checkbox-content">Учебная литература</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1140,7 +1129,7 @@
                         <div class="editions-first__spoiler-item editions-first__spoiler-item_unchecked">
                             <label class="editions-first__checkbox">
                                 <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                                <span class="checkbox_content">Журналы и газеты</span>
+                                <span class="checkbox-content">Журналы и газеты</span>
                             </label>
                             <button class="editions-first__spoiler-item-close">
                                 <svg width="13" height="12" class="editions-first__close-image">
@@ -1153,51 +1142,51 @@
                     <div class="editions-first__checkboxes">
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input">
-                            <span class="checkbox_content">Бестселлеры</span>
+                            <span class="checkbox-content">Бестселлеры</span>
                         </label>
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                            <span class="checkbox_content">Искусство</span>
+                            <span class="checkbox-content">Искусство</span>
                         </label>
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                            <span class="checkbox_content">Архитектура</span>
+                            <span class="checkbox-content">Архитектура</span>
                         </label>
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                            <span class="checkbox_content">Дизайн</span>
+                            <span class="checkbox-content">Дизайн</span>
                         </label>
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                            <span class="checkbox_content">Мода</span>
+                            <span class="checkbox-content">Мода</span>
                         </label>
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                            <span class="checkbox_content">Детям</span>
+                            <span class="checkbox-content">Детям</span>
                         </label>
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                            <span class="checkbox_content">Художественная литература</span>
+                            <span class="checkbox-content">Художественная литература</span>
                         </label>
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                            <span class="checkbox_content">Публицистика</span>
+                            <span class="checkbox-content">Публицистика</span>
                         </label>
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                            <span class="checkbox_content">Путеводители</span>
+                            <span class="checkbox-content">Путеводители</span>
                         </label>
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                            <span class="checkbox_content">Философия</span>
+                            <span class="checkbox-content">Философия</span>
                         </label>
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                            <span class="checkbox_content">Учебная литература</span>
+                            <span class="checkbox-content">Учебная литература</span>
                         </label>
                         <label class="editions-first__checkbox">
                             <input type="checkbox" value="" class="editions-first__checkbox-input"> 
-                            <span class="checkbox_content">Журналы и газеты</span>
+                            <span class="checkbox-content">Журналы и газеты</span>
                         </label>
                     </div>
                     <div class="editions-first__price-content">
@@ -1211,7 +1200,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="editions-second swiper-container editions-swiper">
+                <div class="editions-second swiper-container editions-swiper" data-mobile="false">
                     <div class="swiper-wrapper editions-wrapper">
                         <div class="swiper-slide editions-second__slide">
                             <div class="editions-second__item">
@@ -1416,7 +1405,6 @@
                 <div class="contacts-first">
                     <h3 class="contacts-first__name">Шоурум №2</h3>
                     <span class="contacts-first__adress">Покровский бульвар, дом 24, строение 3</span>
-                    <div class="contacts-first__map_320" id="map-320"></div>
                     <span class="contacts-first__subtitle">Заказать обратный звонок</span>
                     <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST" class="contacts-first__form">
                         <input type="text" name="name" placeholder="Имя*" data-validate-field="name" class="contacts-first__form-input">
@@ -1425,7 +1413,7 @@
                             <span class="contacts-first__button-text">Заказать</span>
                         </button>
                     </form>
-                    <span class="contacts-first__subtitle_links">Связаться в один клик</span>
+                    <span class="contacts-first__subtitle-links">Связаться в один клик</span>
                     <div class="contacts-first__links">
                         <a href="https://wa.me/79666666666" rel="noopener" target="_blank" aria-label="Вотсап" class="contacts-first__link contacts-first__link_one"></a>
                         <a href="https://telegram.im/@blanchard" rel="noopener" target="_blank" aria-label="Телеграм" class="contacts-first__link contacts-first__link_two"></a>

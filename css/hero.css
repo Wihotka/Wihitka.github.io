@@ -5,9 +5,7 @@
     font-weight: 700;
     font-size: 18px;
     color: #ffffff;
-    background-image: url(../images/2-hero/webp/background.webp), url(../images/2-hero/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
 }
 
 .hero-block {
@@ -21,7 +19,7 @@
     margin-bottom: 20px;
     padding-right: 18px;
     font-size: 72px;
-    line-height: 82.8px;
+    line-height: 83px;
 }
 
 .hero-description {
@@ -57,66 +55,62 @@
     background-color: #7943a4;
 }
 
-.swiper-container {
+@-webkit-keyframes backgroundBigger {
+    0% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1.15);
+                transform: scale(1.15);
+    }
+}
+
+@keyframes backgroundBigger {
+    0% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1.15);
+                transform: scale(1.15);
+    }
+}
+
+.hero-background {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1;
-}
-
-.swiper-slide {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-color: #000;
+        -webkit-transition: background-image 600ms linear;
+        -o-transition: background-image 600ms linear;
+    transition: background-image 600ms linear;
+        -webkit-animation: backgroundBigger 4s alternate linear infinite;
+    animation: backgroundBigger 4s alternate linear infinite;
 }
 
-@-webkit-keyframes sliderBigger {
-    0% {
-        -webkit-transform: scale(1);
-                transform: scale(1);
-    }
-    50% {
-        -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-    }
-    100% {
-        -webkit-transform: scale(1.15);
-                transform: scale(1.15);
-    }
-}
-
-@keyframes sliderBigger {
-    0% {
-        -webkit-transform: scale(1);
-                transform: scale(1);
-    }
-    50% {
-        -webkit-transform: scale(1.1);
-                transform: scale(1.1);
-    }
-    100% {
-        -webkit-transform: scale(1.15);
-                transform: scale(1.15);
-    }
-}
-
-.hero .swiper-slide-active {
-        -webkit-animation: sliderBigger 4s alternate linear infinite;
-    animation: sliderBigger 4s alternate linear infinite;
-}
-
-.swiper-slide1 {
+.hero-background_first {
     background-image: url(../images/2-hero/webp/background.webp), url(../images/2-hero/background.jpg);
 }
 
-.swiper-slide2 {
-    background-image: url(../images/2-hero/background-1.jpg), url(../images/2-hero/background-1.jpg);
+.hero-background_second {
+    background-image: url(../images/2-hero/webp/background-1.webp), url(../images/2-hero/background-1.jpg);
 }
 
-.swiper-slide3 {
-    background-image: url(../images/2-hero/background-2.jpg), url(../images/2-hero/background-2.jpg);
+.hero-background_third {
+    background-image: url(../images/2-hero/webp/background-2.webp), url(../images/2-hero/background-2.jpg);
 }
 
 @media (max-width: 1024px) {
@@ -145,25 +139,28 @@
 @media (max-width: 700px) {
     .hero {
         padding: 32px 0 44px 0;
+        text-align: center;
     }
 
     .hero-heading {
-        min-width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
+        max-width: 320px;
+        padding-right: 30px;
+        padding-left: 30px;
         font-size: 32px;
         line-height: 38px;
         text-align: center;
     }
 
     .hero-description {
-        min-width: 100%;
+        max-width: 320px;
+        margin-right: auto;
         margin-bottom: 41px;
-        padding-right: 10px;
-        padding-left: 10px;
+        margin-left: auto;
+        padding-right: 30px;
+        padding-left: 30px;
         font-size: 12px;
         font-weight: normal;
-        line-height: 16.34px;
+        line-height: 16px;
         text-align: center;
     }
 
@@ -172,7 +169,7 @@
         margin-left: auto;
         padding: 9px 17px;
         font-size: 12px;
-        line-height: 16.34px;
+        line-height: 16px;
     }
 }
 

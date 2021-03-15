@@ -6,7 +6,7 @@
     margin-bottom: 26px;
     font-weight: 400;
     font-size: 48px;
-    line-height: 65.37px;
+    line-height: 65px;
 }
 
 .contacts-first {
@@ -102,7 +102,7 @@
     background-color: #7943a4;
 }
 
-.contacts-first__subtitle_links {
+.contacts-first__subtitle-links {
     margin-bottom: 16px;
     font-size: 24px;
 }
@@ -133,6 +133,20 @@
     background-repeat: no-repeat;
 }
 
+.contacts-first__form-button:active {
+    border: 2px solid #d1a9f0;
+    background-color: #7943a4;
+}
+
+.contacts-first__form-button:active .contacts-first__button-text {
+    outline: none;
+}
+
+.contacts-first__link:active {
+    opacity: 0.6;
+    outline: none;
+}
+
 @media (max-width: 1024px) {
     .contacts-first__form-input {
         width: 335px;
@@ -147,7 +161,7 @@
     .contacts__heading {
         margin-bottom: 12px;
         font-size: 28px;
-        line-height: 38.13px;
+        line-height: 38px;
     }
 
     .contacts-first {
@@ -162,7 +176,7 @@
     .contacts-first__name {
         margin-bottom: 0;
         font-size: 18px;
-        line-height: 24.51px;
+        line-height: 24px;
     }
     
     .contacts-first__adress {
@@ -194,7 +208,7 @@
         font-size: 12px;
     }
 
-    .contacts-first__subtitle_links {
+    .contacts-first__subtitle-links {
         margin-bottom: 7px;
         font-size: 18px;
     }

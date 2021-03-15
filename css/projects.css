@@ -7,7 +7,7 @@
     margin-bottom: 16px;
     font-weight: 400;
     font-size: 48px;
-    line-height: 65.37px;
+    line-height: 65px;
 }
 
 .projects__description {
@@ -217,6 +217,28 @@
     color: #ffffff;
 }
 
+.projects__description-link:active {
+    color: #7943a4;
+    border-bottom: 1px solid #7943a4;
+    outline: none;
+}
+
+.projects__item:active .projects__item-image {
+        -webkit-filter: none;
+    filter: none;
+}
+
+.projects-swiper-button-prev:active,
+.projects-swiper-button-next:active {
+    border: 2px solid #d1a9f0;
+    background-image: url(../images/8-projects/nav-background-active.svg);
+}
+
+.projects-swiper-button-prev:active::after,
+.projects-swiper-button-next:active::after {
+    color: #ffffff;
+}
+
 @media (max-width: 1024px) {
     .projects-partners {
         margin: 0 50px;
@@ -259,7 +281,7 @@
     .projects__heading {
         margin-bottom: 12px;
         font-size: 28px;
-        line-height: 38.13px;
+        line-height: 38px;
     }
 
     .projects__description {
